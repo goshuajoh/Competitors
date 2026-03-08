@@ -1,0 +1,20 @@
+{
+  "manufacturer": "Intel",
+  "manufacturer_country": "USA",
+  "chips": [
+    {
+      "chip_family": "Intel WiFi", "chip_model": "Intel AX211 (WiFi 6E)", "status": "active", "release_year": 2022,
+      "target_applications": ["PC/Laptop WiFi", "Access Points", "Enterprise"],
+      "connectivity": { "wifi": { "supported": true, "standards": ["802.11a", "802.11b", "802.11g", "802.11n", "802.11ac", "802.11ax"], "bands": ["2.4GHz", "5GHz", "6GHz"], "mimo": "2T2R", "max_data_rate_mbps": 2400, "wifi_generation": "WiFi 6E", "mesh_networking": false, "wifi_direct": true }, "bluetooth": { "supported": true, "version": "5.3", "ble": true, "classic": true, "mesh": false, "direction_finding": false, "long_range": false }, "ieee802154": null, "lora": false, "sub_ghz": null, "cellular": null, "ethernet": false, "matter_support": false, "other_protocols": [] },
+      "processing": { "cpu_architecture": "N/A (PCIe/USB adapter)", "instruction_set": "other", "cores": 0, "max_clock_mhz": 0, "fpu": false, "dsp": false, "npu": false, "npu_tops": null, "vector_extensions": false, "cache_kb": null, "secondary_core": null },
+      "memory": { "sram_kb": null, "rom_kb": null, "rtc_sram_kb": null, "psram_support": false, "max_psram_mb": null, "internal_flash_kb": null, "external_flash_support": false, "max_external_flash_mb": null, "dma_channels": null },
+      "peripherals": { "gpio_count": null, "uart": null, "spi": null, "i2c": null, "i2s": null, "i3c": false, "usb": null, "sdio": false, "sd_mmc": false, "can_twai": false, "ethernet_mac": false, "camera_interface": false, "lcd_interface": null, "touch_sensor_channels": 0, "adc": null, "dac": null, "pwm_channels": null, "motor_pwm": false, "mipi_csi": false, "mipi_dsi": false, "jtag": false, "pcnt": false, "rmt": false, "timer_groups": null, "watchdog_timers": null, "temperature_sensor": false, "other": ["PCIe CNVio2 / M.2 interface"] },
+      "security": { "secure_boot": false, "flash_encryption": false, "crypto_accelerator": false, "crypto_algorithms": ["WPA3-SAE"], "tee": false, "arm_trustzone": false, "psa_certified": false, "psa_level": null, "tls_support": true, "efuse": false, "rng": false, "digital_signature": false, "secure_element": false, "secure_debug": false },
+      "power_management": { "supply_voltage_min_v": null, "supply_voltage_max_v": null, "dc_dc_converter": false, "active_mode_ma": null, "modem_sleep_ma": null, "light_sleep_ua": null, "deep_sleep_ua": null, "hibernate_ua": null, "shutdown_ua": null, "power_modes": [], "wakeup_sources": [] },
+      "package": { "package_types": ["M.2 2230", "M.2 1216"], "dimensions_mm": ["22x30", "12x16"], "pin_count": null, "operating_temp_min_c": 0, "operating_temp_max_c": 80 },
+      "software_ecosystem": { "primary_sdk": "Linux/Windows drivers", "rtos_support": [], "arduino_support": false, "micropython_support": false, "circuitpython_support": false, "zephyr_support": false, "matter_sdk": false, "homekit_support": false, "ai_ml_frameworks": [], "cloud_integrations": [], "community_size": "large" },
+      "pricing": { "typical_1ku_usd": null, "typical_10ku_usd": null, "digikey_unit_usd": null, "pricing_notes": "PC/laptop adapter, not comparable to MCU pricing" },
+      "metadata": { "source_urls": ["https://www.intel.com/content/www/us/en/products/sku/204837/intel-wifi-6e-ax211-gig/specifications.html"], "datasheet_urls": [], "last_updated": "2026-03-07", "notes": "Not a direct ESP32 competitor. PC/laptop WiFi adapter via PCIe. Different market segment entirely. Included for completeness of WiFi chip landscape.", "confidence": "medium" }
+    }
+  ]
+}

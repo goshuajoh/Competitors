@@ -1,0 +1,92 @@
+{
+  "_description": "Datasheet index for RAG ingestion. Maps chip models to datasheet URLs and local file paths. Add local_path after downloading.",
+  "_last_updated": "2026-03-07",
+  "datasheets": {
+    "espressif": [
+      {"chip_model": "ESP8266EX", "datasheet_url": "https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf", "local_path": null},
+      {"chip_model": "ESP32", "datasheet_url": "https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf", "local_path": null},
+      {"chip_model": "ESP32-S2", "datasheet_url": "https://www.espressif.com/sites/default/files/documentation/esp32-s2_datasheet_en.pdf", "local_path": null},
+      {"chip_model": "ESP32-S3", "datasheet_url": "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf", "local_path": null},
+      {"chip_model": "ESP32-C2", "datasheet_url": "https://www.espressif.com/sites/default/files/documentation/esp8684_datasheet_en.pdf", "local_path": null},
+      {"chip_model": "ESP32-C3", "datasheet_url": "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf", "local_path": null},
+      {"chip_model": "ESP32-C5", "datasheet_url": "https://www.espressif.com/sites/default/files/documentation/esp32-c5_datasheet_en.pdf", "local_path": null},
+      {"chip_model": "ESP32-C6", "datasheet_url": "https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf", "local_path": null},
+      {"chip_model": "ESP32-C61", "datasheet_url": "https://www.espressif.com/sites/default/files/documentation/esp32-c61_datasheet_en.pdf", "local_path": null},
+      {"chip_model": "ESP32-H2", "datasheet_url": "https://www.espressif.com/sites/default/files/documentation/esp32-h2_datasheet_en.pdf", "local_path": null},
+      {"chip_model": "ESP32-H4", "datasheet_url": null, "local_path": null, "notes": "Announced - datasheet not yet available"},
+      {"chip_model": "ESP32-P4", "datasheet_url": "https://www.espressif.com/sites/default/files/documentation/esp32-p4_datasheet_en.pdf", "local_path": null},
+      {"chip_model": "ESP32-H21", "datasheet_url": null, "local_path": null, "notes": "Announced - datasheet not yet available"},
+      {"chip_model": "ESP32-E22", "datasheet_url": null, "local_path": null, "notes": "Announced - datasheet not yet available"}
+    ],
+    "silicon_labs": [
+      {"chip_model": "SiWx917", "datasheet_url": "https://www.silabs.com/documents/public/data-sheets/siwx917-datasheet.pdf", "local_path": null},
+      {"chip_model": "EFR32MG24", "datasheet_url": "https://www.silabs.com/documents/public/data-sheets/efr32mg24-datasheet.pdf", "local_path": null},
+      {"chip_model": "EFR32BG22", "datasheet_url": "https://www.silabs.com/documents/public/data-sheets/efr32bg22-datasheet.pdf", "local_path": null},
+      {"chip_model": "EFR32BG24", "datasheet_url": "https://www.silabs.com/documents/public/data-sheets/efr32bg24-datasheet.pdf", "local_path": null},
+      {"chip_model": "EFR32FG23", "datasheet_url": "https://www.silabs.com/documents/public/data-sheets/efr32fg23-datasheet.pdf", "local_path": null}
+    ],
+    "nordic": [
+      {"chip_model": "nRF52840", "datasheet_url": "https://docs-be.nordicsemi.com/bundle/ps_nrf52840/page/keyfeatures_html5.html", "local_path": null},
+      {"chip_model": "nRF52833", "datasheet_url": "https://docs-be.nordicsemi.com/bundle/ps_nrf52833/page/keyfeatures_html5.html", "local_path": null},
+      {"chip_model": "nRF5340", "datasheet_url": "https://docs-be.nordicsemi.com/bundle/ps_nrf5340/page/keyfeatures_html5.html", "local_path": null},
+      {"chip_model": "nRF54H20", "datasheet_url": "https://docs-be.nordicsemi.com/bundle/ps_nrf54H20/page/keyfeatures_html5.html", "local_path": null},
+      {"chip_model": "nRF54L15", "datasheet_url": "https://docs-be.nordicsemi.com/bundle/ps_nrf54L15/page/keyfeatures_html5.html", "local_path": null},
+      {"chip_model": "nRF7002", "datasheet_url": "https://docs-be.nordicsemi.com/bundle/ps_nrf7002/page/keyfeatures_html5.html", "local_path": null},
+      {"chip_model": "nRF9160", "datasheet_url": "https://docs-be.nordicsemi.com/bundle/ps_nrf9160/page/keyfeatures_html5.html", "local_path": null}
+    ],
+    "stmicroelectronics": [
+      {"chip_model": "STM32WBA55", "datasheet_url": "https://www.st.com/resource/en/datasheet/stm32wba55cg.pdf", "local_path": null},
+      {"chip_model": "STM32WB55", "datasheet_url": "https://www.st.com/resource/en/datasheet/stm32wb55rg.pdf", "local_path": null},
+      {"chip_model": "STM32WL55", "datasheet_url": "https://www.st.com/resource/en/datasheet/stm32wl55jc.pdf", "local_path": null}
+    ],
+    "texas_instruments": [
+      {"chip_model": "CC2652R", "datasheet_url": "https://www.ti.com/lit/ds/symlink/cc2652r.pdf", "local_path": null},
+      {"chip_model": "CC1352R", "datasheet_url": "https://www.ti.com/lit/ds/symlink/cc1352r.pdf", "local_path": null},
+      {"chip_model": "CC3235SF", "datasheet_url": "https://www.ti.com/lit/ds/symlink/cc3235sf.pdf", "local_path": null},
+      {"chip_model": "CC2340R5", "datasheet_url": "https://www.ti.com/lit/ds/symlink/cc2340r5.pdf", "local_path": null}
+    ],
+    "nxp": [
+      {"chip_model": "RW612", "datasheet_url": "https://www.nxp.com/docs/en/data-sheet/RW612.pdf", "local_path": null},
+      {"chip_model": "MCX-W72", "datasheet_url": null, "local_path": null, "notes": "Recently announced - check nxp.com"},
+      {"chip_model": "KW45B41Z", "datasheet_url": "https://www.nxp.com/docs/en/data-sheet/KW45B41Z.pdf", "local_path": null}
+    ],
+    "infineon": [
+      {"chip_model": "CYW43439", "datasheet_url": "https://www.infineon.com/dgdl/Infineon-CYW43439-DataSheet-v03_00-EN.pdf", "local_path": null},
+      {"chip_model": "CYW43012", "datasheet_url": "https://www.infineon.com/dgdl/Infineon-CYW43012-DataSheet-v04_00-EN.pdf", "local_path": null}
+    ],
+    "mediatek": [
+      {"chip_model": "MT7933", "datasheet_url": null, "local_path": null, "notes": "Contact MediaTek for datasheet"},
+      {"chip_model": "MT7903", "datasheet_url": null, "local_path": null, "notes": "Contact MediaTek for datasheet"}
+    ],
+    "realtek": [
+      {"chip_model": "RTL8720DN", "datasheet_url": null, "local_path": null, "notes": "Available under NDA from Realtek"},
+      {"chip_model": "RTL8720CF", "datasheet_url": null, "local_path": null, "notes": "Available under NDA from Realtek"}
+    ],
+    "bouffalo_lab": [
+      {"chip_model": "BL602", "datasheet_url": "https://github.com/bouffalolab/bl_docs/tree/main/BL602_DS/en", "local_path": null},
+      {"chip_model": "BL616", "datasheet_url": "https://github.com/bouffalolab/bl_docs/tree/main/BL616_DS/en", "local_path": null},
+      {"chip_model": "BL808", "datasheet_url": "https://github.com/bouffalolab/bl_docs/tree/main/BL808_DS/en", "local_path": null}
+    ],
+    "intel": [
+      {"chip_model": "AX211", "datasheet_url": null, "local_path": null, "notes": "Intel WiFi 6E adapter - specs on ark.intel.com"}
+    ],
+    "winnermicro": [
+      {"chip_model": "W800", "datasheet_url": "https://www.winnermicro.com/upload/1/editor/1607327764402.pdf", "local_path": null}
+    ],
+    "beken": [
+      {"chip_model": "BK7231N", "datasheet_url": null, "local_path": null, "notes": "Available through Tuya partnership / Beken sales"}
+    ],
+    "telink": [
+      {"chip_model": "TLSR9518", "datasheet_url": null, "local_path": null, "notes": "Contact Telink for datasheet - wiki.telink-semi.cn"}
+    ],
+    "wch": [
+      {"chip_model": "CH32V307", "datasheet_url": "https://www.wch-ic.com/downloads/CH32V307DS0_PDF.html", "local_path": null},
+      {"chip_model": "CH582", "datasheet_url": "https://www.wch-ic.com/downloads/CH583DS1_PDF.html", "local_path": null}
+    ],
+    "luat": [
+      {"chip_model": "Air101", "datasheet_url": "https://wiki.luatos.org/chips/air101/mcu.html", "local_path": null},
+      {"chip_model": "Air105", "datasheet_url": "https://wiki.luatos.org/chips/air105/mcu.html", "local_path": null},
+      {"chip_model": "Air780E", "datasheet_url": "https://wiki.luatos.org/chips/air780e/mcu.html", "local_path": null}
+    ]
+  }
+}

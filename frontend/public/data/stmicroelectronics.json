@@ -1,0 +1,76 @@
+{
+  "manufacturer": "STMicroelectronics",
+  "manufacturer_country": "Switzerland",
+  "chips": [
+    {
+      "chip_family": "STM32WBA",
+      "chip_model": "STM32WBA55",
+      "status": "active",
+      "release_year": 2024,
+      "target_applications": ["Smart Home", "Matter", "Thread", "Zigbee", "BLE Audio", "Industrial IoT"],
+      "connectivity": {
+        "wifi": null,
+        "bluetooth": { "supported": true, "version": "5.4", "ble": true, "classic": false, "mesh": true, "direction_finding": false, "long_range": false },
+        "ieee802154": { "supported": true, "thread": true, "zigbee": true, "matter_over_thread": true },
+        "lora": false, "sub_ghz": null, "cellular": null, "ethernet": false, "matter_support": true,
+        "other_protocols": ["LE Audio / Auracast", "Concurrent multi-protocol"]
+      },
+      "processing": { "cpu_architecture": "ARM Cortex-M33", "instruction_set": "ARM", "cores": 1, "max_clock_mhz": 100, "fpu": true, "dsp": true, "npu": false, "npu_tops": null, "vector_extensions": false, "cache_kb": 8, "secondary_core": null },
+      "memory": { "sram_kb": 128, "rom_kb": null, "rtc_sram_kb": null, "psram_support": false, "max_psram_mb": null, "internal_flash_kb": 1024, "external_flash_support": false, "max_external_flash_mb": null, "dma_channels": null },
+      "peripherals": { "gpio_count": 43, "uart": 2, "spi": 3, "i2c": 3, "i2s": 1, "i3c": true, "usb": null, "sdio": false, "sd_mmc": false, "can_twai": false, "ethernet_mac": false, "camera_interface": false, "lcd_interface": null, "touch_sensor_channels": 0, "adc": { "channels": 19, "resolution_bits": 12, "sample_rate_ksps": null }, "dac": null, "pwm_channels": null, "motor_pwm": false, "mipi_csi": false, "mipi_dsi": false, "jtag": true, "pcnt": false, "rmt": false, "timer_groups": null, "watchdog_timers": 2, "temperature_sensor": true, "other": ["LPUART", "Comparator", "ART Accelerator", "Touch Sensing Controller"] },
+      "security": { "secure_boot": true, "flash_encryption": true, "crypto_accelerator": true, "crypto_algorithms": ["AES-128", "AES-256", "SHA-256", "ECC", "PKA", "TRNG"], "tee": true, "arm_trustzone": true, "psa_certified": true, "psa_level": "SESIP Level 3", "tls_support": true, "efuse": false, "rng": true, "digital_signature": false, "secure_element": false, "secure_debug": true },
+      "power_management": { "supply_voltage_min_v": 1.71, "supply_voltage_max_v": 3.6, "dc_dc_converter": true, "active_mode_ma": null, "modem_sleep_ma": null, "light_sleep_ua": null, "deep_sleep_ua": null, "hibernate_ua": null, "shutdown_ua": null, "power_modes": ["Run", "Sleep", "Stop", "Standby", "Shutdown", "VBAT"], "wakeup_sources": ["GPIO", "Timer", "Radio", "RTC"] },
+      "package": { "package_types": ["UFQFPN48", "WLCSP59", "UFBGA121"], "dimensions_mm": ["7x7"], "pin_count": 48, "operating_temp_min_c": -40, "operating_temp_max_c": 105 },
+      "software_ecosystem": { "primary_sdk": "STM32CubeWBA", "rtos_support": ["FreeRTOS", "Azure RTOS"], "arduino_support": false, "micropython_support": false, "circuitpython_support": false, "zephyr_support": true, "matter_sdk": true, "homekit_support": false, "ai_ml_frameworks": [], "cloud_integrations": ["AWS IoT", "Azure IoT"], "community_size": "medium" },
+      "pricing": { "typical_1ku_usd": null, "typical_10ku_usd": null, "digikey_unit_usd": null, "pricing_notes": null },
+      "metadata": { "source_urls": ["https://www.st.com/en/microcontrollers-microprocessors/stm32wba55cg.html"], "datasheet_urls": [], "last_updated": "2026-03-07", "notes": "First SESIP Level 3 certified wireless MCU. Concurrent multi-protocol (BLE+Zigbee/Thread simultaneously). LE Audio/Auracast. I3C. Direct competitor to ESP32-C6 and EFR32MG24 for Matter/Thread.", "confidence": "high" }
+    },
+    {
+      "chip_family": "STM32WB",
+      "chip_model": "STM32WB55",
+      "status": "active",
+      "release_year": 2019,
+      "target_applications": ["Smart Home", "Wearables", "BLE Sensors", "Zigbee/Thread"],
+      "connectivity": {
+        "wifi": null,
+        "bluetooth": { "supported": true, "version": "5.4", "ble": true, "classic": false, "mesh": true, "direction_finding": false, "long_range": false },
+        "ieee802154": { "supported": true, "thread": true, "zigbee": true, "matter_over_thread": true },
+        "lora": false, "sub_ghz": null, "cellular": null, "ethernet": false, "matter_support": true,
+        "other_protocols": []
+      },
+      "processing": { "cpu_architecture": "ARM Cortex-M4F + Cortex-M0+", "instruction_set": "ARM", "cores": 2, "max_clock_mhz": 64, "fpu": true, "dsp": true, "npu": false, "npu_tops": null, "vector_extensions": false, "cache_kb": null, "secondary_core": { "architecture": "ARM Cortex-M0+", "clock_mhz": 32, "purpose": "Radio stack processing" } },
+      "memory": { "sram_kb": 256, "rom_kb": null, "rtc_sram_kb": null, "psram_support": false, "max_psram_mb": null, "internal_flash_kb": 1024, "external_flash_support": false, "max_external_flash_mb": null, "dma_channels": 14 },
+      "peripherals": { "gpio_count": 72, "uart": 2, "spi": 2, "i2c": 3, "i2s": 1, "i3c": false, "usb": { "supported": true, "type": "USB 2.0 Full-Speed", "host": false, "device": true }, "sdio": false, "sd_mmc": false, "can_twai": false, "ethernet_mac": false, "camera_interface": false, "lcd_interface": { "supported": true, "types": ["Segment LCD (8x40)"] }, "touch_sensor_channels": 18, "adc": { "channels": 19, "resolution_bits": 12, "sample_rate_ksps": null }, "dac": null, "pwm_channels": null, "motor_pwm": false, "mipi_csi": false, "mipi_dsi": false, "jtag": true, "pcnt": false, "rmt": false, "timer_groups": null, "watchdog_timers": 2, "temperature_sensor": true, "other": ["LPUART", "Comparator", "Segment LCD", "SAI", "QUADSPI", "Touch Sensing"] },
+      "security": { "secure_boot": true, "flash_encryption": false, "crypto_accelerator": true, "crypto_algorithms": ["AES-256", "SHA-256", "PKA", "TRNG"], "tee": false, "arm_trustzone": false, "psa_certified": false, "psa_level": null, "tls_support": true, "efuse": false, "rng": true, "digital_signature": false, "secure_element": false, "secure_debug": true },
+      "power_management": { "supply_voltage_min_v": 1.71, "supply_voltage_max_v": 3.6, "dc_dc_converter": true, "active_mode_ma": null, "modem_sleep_ma": null, "light_sleep_ua": null, "deep_sleep_ua": null, "hibernate_ua": null, "shutdown_ua": 0.6, "power_modes": ["Run", "Sleep", "Stop", "Standby", "Shutdown"], "wakeup_sources": ["GPIO", "Timer", "RTC"] },
+      "package": { "package_types": ["UFQFPN48", "WLCSP100", "UFBGA129"], "dimensions_mm": ["7x7"], "pin_count": 48, "operating_temp_min_c": -40, "operating_temp_max_c": 85 },
+      "software_ecosystem": { "primary_sdk": "STM32CubeWB", "rtos_support": ["FreeRTOS", "Azure RTOS"], "arduino_support": false, "micropython_support": false, "circuitpython_support": false, "zephyr_support": true, "matter_sdk": true, "homekit_support": false, "ai_ml_frameworks": [], "cloud_integrations": ["AWS IoT", "Azure IoT"], "community_size": "medium" },
+      "pricing": { "typical_1ku_usd": null, "typical_10ku_usd": null, "digikey_unit_usd": 5.50, "pricing_notes": null },
+      "metadata": { "source_urls": ["https://www.st.com/en/microcontrollers-microprocessors/stm32wb55rg.html"], "datasheet_urls": [], "last_updated": "2026-03-07", "notes": "Mature BLE+802.15.4 dual-core MCU. Rich peripheral set (segment LCD, touch, USB). Being superseded by WBA series.", "confidence": "high" }
+    },
+    {
+      "chip_family": "STM32WL",
+      "chip_model": "STM32WL55",
+      "status": "active",
+      "release_year": 2020,
+      "target_applications": ["LoRa/LoRaWAN", "Smart Metering", "Industrial Sensors", "Smart Agriculture", "Smart City"],
+      "connectivity": {
+        "wifi": null, "bluetooth": null,
+        "ieee802154": null,
+        "lora": true,
+        "sub_ghz": { "supported": true, "frequency_bands": ["150MHz-960MHz"] },
+        "cellular": null, "ethernet": false, "matter_support": false,
+        "other_protocols": ["LoRa", "LoRaWAN", "(G)FSK", "(G)MSK", "BPSK"]
+      },
+      "processing": { "cpu_architecture": "ARM Cortex-M4 + Cortex-M0+", "instruction_set": "ARM", "cores": 2, "max_clock_mhz": 48, "fpu": true, "dsp": true, "npu": false, "npu_tops": null, "vector_extensions": false, "cache_kb": null, "secondary_core": { "architecture": "ARM Cortex-M0+", "clock_mhz": 48, "purpose": "Radio/security processing" } },
+      "memory": { "sram_kb": 64, "rom_kb": null, "rtc_sram_kb": null, "psram_support": false, "max_psram_mb": null, "internal_flash_kb": 256, "external_flash_support": false, "max_external_flash_mb": null, "dma_channels": 7 },
+      "peripherals": { "gpio_count": 43, "uart": 2, "spi": 2, "i2c": 3, "i2s": 0, "i3c": false, "usb": null, "sdio": false, "sd_mmc": false, "can_twai": false, "ethernet_mac": false, "camera_interface": false, "lcd_interface": null, "touch_sensor_channels": 0, "adc": { "channels": 12, "resolution_bits": 12, "sample_rate_ksps": null }, "dac": { "channels": 1, "resolution_bits": 12 }, "pwm_channels": null, "motor_pwm": false, "mipi_csi": false, "mipi_dsi": false, "jtag": true, "pcnt": false, "rmt": false, "timer_groups": null, "watchdog_timers": 2, "temperature_sensor": true, "other": ["LPUART", "Comparator", "Integrated Sub-GHz radio"] },
+      "security": { "secure_boot": false, "flash_encryption": false, "crypto_accelerator": true, "crypto_algorithms": ["AES-128", "AES-256", "SHA-256", "ECC", "PKA", "TRNG"], "tee": false, "arm_trustzone": false, "psa_certified": false, "psa_level": null, "tls_support": true, "efuse": false, "rng": true, "digital_signature": false, "secure_element": false, "secure_debug": false },
+      "power_management": { "supply_voltage_min_v": 1.7, "supply_voltage_max_v": 3.6, "dc_dc_converter": true, "active_mode_ma": null, "modem_sleep_ma": null, "light_sleep_ua": null, "deep_sleep_ua": null, "hibernate_ua": null, "shutdown_ua": 0.024, "power_modes": ["Run", "Sleep", "Stop", "Standby", "Shutdown"], "wakeup_sources": ["GPIO", "Timer", "RTC"] },
+      "package": { "package_types": ["UFQFPN48", "UFBGA73"], "dimensions_mm": ["7x7"], "pin_count": 48, "operating_temp_min_c": -40, "operating_temp_max_c": 105 },
+      "software_ecosystem": { "primary_sdk": "STM32CubeWL", "rtos_support": ["FreeRTOS", "Azure RTOS"], "arduino_support": false, "micropython_support": false, "circuitpython_support": false, "zephyr_support": true, "matter_sdk": false, "homekit_support": false, "ai_ml_frameworks": [], "cloud_integrations": ["AWS IoT"], "community_size": "medium" },
+      "pricing": { "typical_1ku_usd": null, "typical_10ku_usd": null, "digikey_unit_usd": null, "pricing_notes": null },
+      "metadata": { "source_urls": ["https://www.st.com/en/microcontrollers-microprocessors/stm32wl55jc.html"], "datasheet_urls": [], "last_updated": "2026-03-07", "notes": "World's first LoRa SoC. No Espressif equivalent - ESP32 doesn't have LoRa. For sub-GHz long-range IoT.", "confidence": "high" }
+    }
+  ]
+}

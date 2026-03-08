@@ -1,0 +1,169 @@
+{
+  "manufacturer": "Nordic Semiconductor",
+  "manufacturer_country": "Norway",
+  "chips": [
+    {
+      "chip_family": "nRF52",
+      "chip_model": "nRF52840",
+      "status": "active",
+      "release_year": 2018,
+      "target_applications": ["Smart Home", "Wearables", "PC Peripherals", "Thread/Zigbee Mesh", "Gaming"],
+      "connectivity": {
+        "wifi": null,
+        "bluetooth": { "supported": true, "version": "5.0", "ble": true, "classic": false, "mesh": true, "direction_finding": true, "long_range": true },
+        "ieee802154": { "supported": true, "thread": true, "zigbee": true, "matter_over_thread": true },
+        "lora": false, "sub_ghz": null, "cellular": null, "ethernet": false, "matter_support": true,
+        "other_protocols": ["ANT", "2.4GHz Proprietary", "NFC-A tag"]
+      },
+      "processing": { "cpu_architecture": "ARM Cortex-M4F", "instruction_set": "ARM", "cores": 1, "max_clock_mhz": 64, "fpu": true, "dsp": true, "npu": false, "npu_tops": null, "vector_extensions": false, "cache_kb": null, "secondary_core": null },
+      "memory": { "sram_kb": 256, "rom_kb": null, "rtc_sram_kb": null, "psram_support": false, "max_psram_mb": null, "internal_flash_kb": 1024, "external_flash_support": true, "max_external_flash_mb": null, "dma_channels": null },
+      "peripherals": { "gpio_count": 48, "uart": 2, "spi": 4, "i2c": 2, "i2s": 1, "i3c": false, "usb": { "supported": true, "type": "USB 2.0 Full-Speed", "host": false, "device": true }, "sdio": false, "sd_mmc": false, "can_twai": false, "ethernet_mac": false, "camera_interface": false, "lcd_interface": null, "touch_sensor_channels": 0, "adc": { "channels": 8, "resolution_bits": 12, "sample_rate_ksps": 200 }, "dac": null, "pwm_channels": 16, "motor_pwm": false, "mipi_csi": false, "mipi_dsi": false, "jtag": true, "pcnt": false, "rmt": false, "timer_groups": null, "watchdog_timers": 1, "temperature_sensor": true, "other": ["QSPI", "PDM", "NFC-A", "Comparator", "QDEC"] },
+      "security": { "secure_boot": false, "flash_encryption": false, "crypto_accelerator": true, "crypto_algorithms": ["AES-128", "AES-ECB", "AES-CCM", "AES-CTR"], "tee": false, "arm_trustzone": false, "psa_certified": false, "psa_level": null, "tls_support": true, "efuse": false, "rng": true, "digital_signature": false, "secure_element": false, "secure_debug": false },
+      "power_management": { "supply_voltage_min_v": 1.7, "supply_voltage_max_v": 5.5, "dc_dc_converter": true, "active_mode_ma": null, "modem_sleep_ma": null, "light_sleep_ua": null, "deep_sleep_ua": 1.5, "hibernate_ua": 0.4, "shutdown_ua": 0.3, "power_modes": ["System ON", "System OFF"], "wakeup_sources": ["GPIO", "Timer", "NFC", "Comparator", "USB"] },
+      "package": { "package_types": ["QFN48", "WLCSP"], "dimensions_mm": ["6x6", "3.5x3.6"], "pin_count": 48, "operating_temp_min_c": -40, "operating_temp_max_c": 85 },
+      "software_ecosystem": { "primary_sdk": "nRF Connect SDK / nRF5 SDK", "rtos_support": ["Zephyr", "FreeRTOS"], "arduino_support": true, "micropython_support": true, "circuitpython_support": true, "zephyr_support": true, "matter_sdk": true, "homekit_support": true, "ai_ml_frameworks": ["TensorFlow Lite Micro"], "cloud_integrations": ["AWS IoT", "Azure IoT", "nRF Cloud"], "community_size": "large" },
+      "pricing": { "typical_1ku_usd": null, "typical_10ku_usd": null, "digikey_unit_usd": 4.50, "pricing_notes": null },
+      "metadata": { "source_urls": ["https://www.nordicsemi.com/Products/nRF52840"], "datasheet_urls": [], "last_updated": "2026-03-07", "notes": "Workhorse BLE+Thread SoC. Massive community. Higher cost than ESP32 but lower power. CryptoCell-310 security.", "confidence": "high" }
+    },
+    {
+      "chip_family": "nRF52",
+      "chip_model": "nRF52833",
+      "status": "active",
+      "release_year": 2020,
+      "target_applications": ["Wearables", "Gaming", "PC Peripherals", "Thread/Zigbee"],
+      "connectivity": {
+        "wifi": null,
+        "bluetooth": { "supported": true, "version": "5.1", "ble": true, "classic": false, "mesh": true, "direction_finding": true, "long_range": true },
+        "ieee802154": { "supported": true, "thread": true, "zigbee": true, "matter_over_thread": true },
+        "lora": false, "sub_ghz": null, "cellular": null, "ethernet": false, "matter_support": true,
+        "other_protocols": ["ANT", "2.4GHz Proprietary", "NFC-A"]
+      },
+      "processing": { "cpu_architecture": "ARM Cortex-M4F", "instruction_set": "ARM", "cores": 1, "max_clock_mhz": 64, "fpu": true, "dsp": true, "npu": false, "npu_tops": null, "vector_extensions": false, "cache_kb": null, "secondary_core": null },
+      "memory": { "sram_kb": 128, "rom_kb": null, "rtc_sram_kb": null, "psram_support": false, "max_psram_mb": null, "internal_flash_kb": 512, "external_flash_support": false, "max_external_flash_mb": null, "dma_channels": null },
+      "peripherals": { "gpio_count": 42, "uart": 2, "spi": 4, "i2c": 2, "i2s": 1, "i3c": false, "usb": null, "sdio": false, "sd_mmc": false, "can_twai": false, "ethernet_mac": false, "camera_interface": false, "lcd_interface": null, "touch_sensor_channels": 0, "adc": { "channels": 8, "resolution_bits": 12, "sample_rate_ksps": 200 }, "dac": null, "pwm_channels": 16, "motor_pwm": false, "mipi_csi": false, "mipi_dsi": false, "jtag": true, "pcnt": false, "rmt": false, "timer_groups": null, "watchdog_timers": 1, "temperature_sensor": true, "other": ["PDM", "NFC-A", "QDEC"] },
+      "security": { "secure_boot": false, "flash_encryption": false, "crypto_accelerator": true, "crypto_algorithms": ["AES-128"], "tee": false, "arm_trustzone": false, "psa_certified": false, "psa_level": null, "tls_support": true, "efuse": false, "rng": true, "digital_signature": false, "secure_element": false, "secure_debug": false },
+      "power_management": { "supply_voltage_min_v": 1.7, "supply_voltage_max_v": 5.5, "dc_dc_converter": true, "active_mode_ma": null, "modem_sleep_ma": null, "light_sleep_ua": null, "deep_sleep_ua": 1.5, "hibernate_ua": 0.4, "shutdown_ua": null, "power_modes": ["System ON", "System OFF"], "wakeup_sources": ["GPIO", "Timer", "NFC"] },
+      "package": { "package_types": ["QFN40", "WLCSP"], "dimensions_mm": ["5x5"], "pin_count": 40, "operating_temp_min_c": -40, "operating_temp_max_c": 105 },
+      "software_ecosystem": { "primary_sdk": "nRF Connect SDK", "rtos_support": ["Zephyr"], "arduino_support": true, "micropython_support": false, "circuitpython_support": false, "zephyr_support": true, "matter_sdk": true, "homekit_support": false, "ai_ml_frameworks": [], "cloud_integrations": ["nRF Cloud"], "community_size": "large" },
+      "pricing": { "typical_1ku_usd": null, "typical_10ku_usd": null, "digikey_unit_usd": 3.50, "pricing_notes": null },
+      "metadata": { "source_urls": ["https://www.nordicsemi.com/Products/nRF52833"], "datasheet_urls": [], "last_updated": "2026-03-07", "notes": "Mid-range nRF52. Direction finding capable. 105°C temp range.", "confidence": "high" }
+    },
+    {
+      "chip_family": "nRF53",
+      "chip_model": "nRF5340",
+      "status": "active",
+      "release_year": 2020,
+      "target_applications": ["LE Audio", "Wearables", "Smart Home", "PC Peripherals", "Industrial"],
+      "connectivity": {
+        "wifi": null,
+        "bluetooth": { "supported": true, "version": "5.3", "ble": true, "classic": false, "mesh": true, "direction_finding": true, "long_range": true },
+        "ieee802154": { "supported": true, "thread": true, "zigbee": true, "matter_over_thread": true },
+        "lora": false, "sub_ghz": null, "cellular": null, "ethernet": false, "matter_support": true,
+        "other_protocols": ["ANT", "NFC-A", "LE Audio"]
+      },
+      "processing": { "cpu_architecture": "ARM Cortex-M33 (dual-core)", "instruction_set": "ARM", "cores": 2, "max_clock_mhz": 128, "fpu": true, "dsp": true, "npu": false, "npu_tops": null, "vector_extensions": false, "cache_kb": 8, "secondary_core": { "architecture": "ARM Cortex-M33 (Network Core)", "clock_mhz": 64, "purpose": "Protocol processing" } },
+      "memory": { "sram_kb": 512, "rom_kb": null, "rtc_sram_kb": null, "psram_support": false, "max_psram_mb": null, "internal_flash_kb": 1024, "external_flash_support": true, "max_external_flash_mb": null, "dma_channels": null },
+      "peripherals": { "gpio_count": 48, "uart": 4, "spi": 5, "i2c": 4, "i2s": 2, "i3c": false, "usb": { "supported": true, "type": "USB 2.0 Full-Speed", "host": false, "device": true }, "sdio": false, "sd_mmc": false, "can_twai": false, "ethernet_mac": false, "camera_interface": false, "lcd_interface": null, "touch_sensor_channels": 0, "adc": { "channels": 8, "resolution_bits": 12, "sample_rate_ksps": 200 }, "dac": null, "pwm_channels": 16, "motor_pwm": false, "mipi_csi": false, "mipi_dsi": false, "jtag": true, "pcnt": false, "rmt": false, "timer_groups": null, "watchdog_timers": 2, "temperature_sensor": true, "other": ["QSPI", "HS-SPI (32MHz)", "PDM", "NFC-A", "QDEC", "Comparator"] },
+      "security": { "secure_boot": true, "flash_encryption": true, "crypto_accelerator": true, "crypto_algorithms": ["AES-128", "AES-256", "SHA-256", "RSA", "ECC", "ECDSA", "ECDH", "EdDSA", "ChaCha-Poly"], "tee": true, "arm_trustzone": true, "psa_certified": true, "psa_level": "Level 1", "tls_support": true, "efuse": false, "rng": true, "digital_signature": true, "secure_element": false, "secure_debug": true },
+      "power_management": { "supply_voltage_min_v": 1.7, "supply_voltage_max_v": 5.5, "dc_dc_converter": true, "active_mode_ma": null, "modem_sleep_ma": null, "light_sleep_ua": null, "deep_sleep_ua": 1.5, "hibernate_ua": 0.4, "shutdown_ua": null, "power_modes": ["System ON", "System OFF"], "wakeup_sources": ["GPIO", "Timer", "NFC", "Comparator"] },
+      "package": { "package_types": ["QFN94", "WLCSP"], "dimensions_mm": ["7x7"], "pin_count": 94, "operating_temp_min_c": -40, "operating_temp_max_c": 105 },
+      "software_ecosystem": { "primary_sdk": "nRF Connect SDK", "rtos_support": ["Zephyr"], "arduino_support": true, "micropython_support": false, "circuitpython_support": false, "zephyr_support": true, "matter_sdk": true, "homekit_support": true, "ai_ml_frameworks": ["TensorFlow Lite Micro"], "cloud_integrations": ["AWS IoT", "Azure IoT", "nRF Cloud"], "community_size": "large" },
+      "pricing": { "typical_1ku_usd": null, "typical_10ku_usd": null, "digikey_unit_usd": 6.00, "pricing_notes": null },
+      "metadata": { "source_urls": ["https://www.nordicsemi.com/Products/nRF5340"], "datasheet_urls": [], "last_updated": "2026-03-07", "notes": "First dual-core BLE SoC. TrustZone + CryptoCell-312 security. LE Audio capable. 29% lower TX, 41% lower RX vs nRF52840.", "confidence": "high" }
+    },
+    {
+      "chip_family": "nRF54H",
+      "chip_model": "nRF54H20",
+      "status": "active",
+      "release_year": 2024,
+      "target_applications": ["LE Audio", "Wearables", "Smart Home", "Edge AI", "Industrial"],
+      "connectivity": {
+        "wifi": null,
+        "bluetooth": { "supported": true, "version": "5.4", "ble": true, "classic": false, "mesh": true, "direction_finding": true, "long_range": true },
+        "ieee802154": { "supported": true, "thread": true, "zigbee": true, "matter_over_thread": true },
+        "lora": false, "sub_ghz": null, "cellular": null, "ethernet": false, "matter_support": true,
+        "other_protocols": ["NFC-A", "LE Audio", "2.4GHz Proprietary"]
+      },
+      "processing": { "cpu_architecture": "ARM Cortex-M33 + RISC-V (multi-core)", "instruction_set": "ARM", "cores": 4, "max_clock_mhz": 320, "fpu": true, "dsp": true, "npu": false, "npu_tops": null, "vector_extensions": false, "cache_kb": null, "secondary_core": { "architecture": "2x RISC-V coprocessors", "clock_mhz": 320, "purpose": "Offload processing" } },
+      "memory": { "sram_kb": 1024, "rom_kb": null, "rtc_sram_kb": null, "psram_support": false, "max_psram_mb": null, "internal_flash_kb": 2048, "external_flash_support": true, "max_external_flash_mb": null, "dma_channels": null },
+      "peripherals": { "gpio_count": null, "uart": null, "spi": null, "i2c": null, "i2s": null, "i3c": true, "usb": { "supported": true, "type": "USB 2.0 High-Speed (480 Mbps)", "host": true, "device": true }, "sdio": false, "sd_mmc": false, "can_twai": true, "ethernet_mac": false, "camera_interface": false, "lcd_interface": null, "touch_sensor_channels": 0, "adc": { "channels": null, "resolution_bits": null, "sample_rate_ksps": null }, "dac": null, "pwm_channels": null, "motor_pwm": false, "mipi_csi": false, "mipi_dsi": false, "jtag": true, "pcnt": false, "rmt": false, "timer_groups": null, "watchdog_timers": null, "temperature_sensor": true, "other": ["CAN FD", "I3C", "QSPI", "HS-SPI", "SMIF (400 Mbps)", "PDM", "NFC-A", "QDEC", "Comparator"] },
+      "security": { "secure_boot": true, "flash_encryption": true, "crypto_accelerator": true, "crypto_algorithms": ["AES", "SHA", "RSA", "ECC", "ECDSA", "ECDH", "ChaCha-Poly", "Ed25519"], "tee": true, "arm_trustzone": true, "psa_certified": true, "psa_level": "Level 3", "tls_support": true, "efuse": false, "rng": true, "digital_signature": true, "secure_element": false, "secure_debug": true },
+      "power_management": { "supply_voltage_min_v": 1.7, "supply_voltage_max_v": 5.5, "dc_dc_converter": true, "active_mode_ma": null, "modem_sleep_ma": null, "light_sleep_ua": null, "deep_sleep_ua": null, "hibernate_ua": null, "shutdown_ua": null, "power_modes": ["Active", "Idle", "Sleep", "Hibernate"], "wakeup_sources": ["GPIO", "Timer", "NFC", "Comparator"] },
+      "package": { "package_types": ["BGA"], "dimensions_mm": [], "pin_count": null, "operating_temp_min_c": -40, "operating_temp_max_c": 105 },
+      "software_ecosystem": { "primary_sdk": "nRF Connect SDK", "rtos_support": ["Zephyr"], "arduino_support": false, "micropython_support": false, "circuitpython_support": false, "zephyr_support": true, "matter_sdk": true, "homekit_support": false, "ai_ml_frameworks": ["TensorFlow Lite Micro"], "cloud_integrations": ["AWS IoT", "nRF Cloud"], "community_size": "medium" },
+      "pricing": { "typical_1ku_usd": null, "typical_10ku_usd": null, "digikey_unit_usd": null, "pricing_notes": "Premium tier" },
+      "metadata": { "source_urls": ["https://www.nordicsemi.com/Products/nRF54H20"], "datasheet_urls": [], "last_updated": "2026-03-07", "notes": "Most powerful Nordic SoC. 22nm GF FDX. PSA Level 3. 320MHz multi-core. USB HS, CAN FD, I3C. RX current 1.7mA. 1290 CoreMark score.", "confidence": "high" }
+    },
+    {
+      "chip_family": "nRF54L",
+      "chip_model": "nRF54L15",
+      "status": "active",
+      "release_year": 2024,
+      "target_applications": ["Low Power BLE", "Smart Home Sensors", "Wearables", "PC Peripherals"],
+      "connectivity": {
+        "wifi": null,
+        "bluetooth": { "supported": true, "version": "5.4", "ble": true, "classic": false, "mesh": true, "direction_finding": true, "long_range": true },
+        "ieee802154": { "supported": true, "thread": true, "zigbee": true, "matter_over_thread": true },
+        "lora": false, "sub_ghz": null, "cellular": null, "ethernet": false, "matter_support": true,
+        "other_protocols": ["2.4GHz Proprietary"]
+      },
+      "processing": { "cpu_architecture": "ARM Cortex-M33", "instruction_set": "ARM", "cores": 1, "max_clock_mhz": 128, "fpu": true, "dsp": true, "npu": false, "npu_tops": null, "vector_extensions": false, "cache_kb": null, "secondary_core": { "architecture": "RISC-V coprocessor", "clock_mhz": null, "purpose": "Low-power processing" } },
+      "memory": { "sram_kb": 256, "rom_kb": null, "rtc_sram_kb": null, "psram_support": false, "max_psram_mb": null, "internal_flash_kb": 1536, "external_flash_support": true, "max_external_flash_mb": null, "dma_channels": null },
+      "peripherals": { "gpio_count": 32, "uart": null, "spi": null, "i2c": null, "i2s": null, "i3c": false, "usb": null, "sdio": false, "sd_mmc": false, "can_twai": false, "ethernet_mac": false, "camera_interface": false, "lcd_interface": null, "touch_sensor_channels": 0, "adc": { "channels": null, "resolution_bits": null, "sample_rate_ksps": null }, "dac": null, "pwm_channels": null, "motor_pwm": false, "mipi_csi": false, "mipi_dsi": false, "jtag": true, "pcnt": false, "rmt": false, "timer_groups": null, "watchdog_timers": null, "temperature_sensor": true, "other": ["QDEC", "Comparator", "PDM"] },
+      "security": { "secure_boot": true, "flash_encryption": true, "crypto_accelerator": true, "crypto_algorithms": ["AES", "SHA", "ECC", "ECDSA"], "tee": true, "arm_trustzone": true, "psa_certified": true, "psa_level": "Level 2", "tls_support": true, "efuse": false, "rng": true, "digital_signature": true, "secure_element": false, "secure_debug": true },
+      "power_management": { "supply_voltage_min_v": 1.7, "supply_voltage_max_v": 5.5, "dc_dc_converter": true, "active_mode_ma": null, "modem_sleep_ma": null, "light_sleep_ua": null, "deep_sleep_ua": null, "hibernate_ua": null, "shutdown_ua": null, "power_modes": ["Active", "Idle", "Sleep", "Hibernate"], "wakeup_sources": ["GPIO", "Timer"] },
+      "package": { "package_types": ["QFN32", "QFN48"], "dimensions_mm": ["4.8x5", "6x6"], "pin_count": 32, "operating_temp_min_c": -40, "operating_temp_max_c": 105 },
+      "software_ecosystem": { "primary_sdk": "nRF Connect SDK", "rtos_support": ["Zephyr"], "arduino_support": false, "micropython_support": false, "circuitpython_support": false, "zephyr_support": true, "matter_sdk": true, "homekit_support": false, "ai_ml_frameworks": [], "cloud_integrations": ["nRF Cloud"], "community_size": "medium" },
+      "pricing": { "typical_1ku_usd": null, "typical_10ku_usd": null, "digikey_unit_usd": null, "pricing_notes": "nRF52840 replacement target pricing" },
+      "metadata": { "source_urls": ["https://www.nordicsemi.com/Products/nRF54L15"], "datasheet_urls": [], "last_updated": "2026-03-07", "notes": "Next-gen replacement for nRF52840. Better power, security (PSA L2), and performance. Direct competitor to ESP32-H2/C6 for Thread/BLE.", "confidence": "high" }
+    },
+    {
+      "chip_family": "nRF70",
+      "chip_model": "nRF7002",
+      "status": "active",
+      "release_year": 2022,
+      "target_applications": ["WiFi + BLE IoT", "Matter over WiFi", "Location Services"],
+      "connectivity": {
+        "wifi": { "supported": true, "standards": ["802.11a", "802.11b", "802.11g", "802.11n", "802.11ac", "802.11ax"], "bands": ["2.4GHz", "5GHz"], "mimo": "1T1R", "max_data_rate_mbps": null, "wifi_generation": "WiFi 6", "mesh_networking": false, "wifi_direct": false },
+        "bluetooth": null,
+        "ieee802154": null,
+        "lora": false, "sub_ghz": null, "cellular": null, "ethernet": false, "matter_support": true,
+        "other_protocols": ["WiFi locationing (SSID sniffing)"]
+      },
+      "processing": { "cpu_architecture": "Companion IC (no standalone MCU)", "instruction_set": "other", "cores": 0, "max_clock_mhz": 0, "fpu": false, "dsp": false, "npu": false, "npu_tops": null, "vector_extensions": false, "cache_kb": null, "secondary_core": null },
+      "memory": { "sram_kb": null, "rom_kb": null, "rtc_sram_kb": null, "psram_support": false, "max_psram_mb": null, "internal_flash_kb": null, "external_flash_support": false, "max_external_flash_mb": null, "dma_channels": null },
+      "peripherals": { "gpio_count": null, "uart": null, "spi": 1, "i2c": null, "i2s": null, "i3c": false, "usb": null, "sdio": false, "sd_mmc": false, "can_twai": false, "ethernet_mac": false, "camera_interface": false, "lcd_interface": null, "touch_sensor_channels": 0, "adc": null, "dac": null, "pwm_channels": null, "motor_pwm": false, "mipi_csi": false, "mipi_dsi": false, "jtag": false, "pcnt": false, "rmt": false, "timer_groups": null, "watchdog_timers": null, "temperature_sensor": false, "other": ["SPI/QSPI host interface", "Coexistence interface"] },
+      "security": { "secure_boot": false, "flash_encryption": false, "crypto_accelerator": false, "crypto_algorithms": [], "tee": false, "arm_trustzone": false, "psa_certified": false, "psa_level": null, "tls_support": true, "efuse": false, "rng": false, "digital_signature": false, "secure_element": false, "secure_debug": false },
+      "power_management": { "supply_voltage_min_v": null, "supply_voltage_max_v": null, "dc_dc_converter": false, "active_mode_ma": null, "modem_sleep_ma": null, "light_sleep_ua": null, "deep_sleep_ua": null, "hibernate_ua": null, "shutdown_ua": null, "power_modes": [], "wakeup_sources": [] },
+      "package": { "package_types": ["QFN28"], "dimensions_mm": ["5x5"], "pin_count": 28, "operating_temp_min_c": -40, "operating_temp_max_c": 85 },
+      "software_ecosystem": { "primary_sdk": "nRF Connect SDK", "rtos_support": ["Zephyr"], "arduino_support": false, "micropython_support": false, "circuitpython_support": false, "zephyr_support": true, "matter_sdk": true, "homekit_support": false, "ai_ml_frameworks": [], "cloud_integrations": ["nRF Cloud"], "community_size": "medium" },
+      "pricing": { "typical_1ku_usd": null, "typical_10ku_usd": null, "digikey_unit_usd": null, "pricing_notes": null },
+      "metadata": { "source_urls": ["https://www.nordicsemi.com/Products/nRF7002"], "datasheet_urls": [], "last_updated": "2026-03-07", "notes": "WiFi 6 companion IC. Dual-band 2.4/5GHz. Pairs with nRF52/53/54 SoCs. OFDMA, TWT support. Not a standalone SoC.", "confidence": "high" }
+    },
+    {
+      "chip_family": "nRF91",
+      "chip_model": "nRF9160",
+      "status": "active",
+      "release_year": 2018,
+      "target_applications": ["Cellular IoT", "Asset Tracking", "Smart Meters", "Wearables"],
+      "connectivity": {
+        "wifi": null,
+        "bluetooth": null,
+        "ieee802154": null,
+        "lora": false, "sub_ghz": null,
+        "cellular": { "supported": true, "type": "LTE-M / NB-IoT" },
+        "ethernet": false, "matter_support": false,
+        "other_protocols": ["GPS/GNSS"]
+      },
+      "processing": { "cpu_architecture": "ARM Cortex-M33", "instruction_set": "ARM", "cores": 1, "max_clock_mhz": 64, "fpu": true, "dsp": true, "npu": false, "npu_tops": null, "vector_extensions": false, "cache_kb": null, "secondary_core": null },
+      "memory": { "sram_kb": 256, "rom_kb": null, "rtc_sram_kb": null, "psram_support": false, "max_psram_mb": null, "internal_flash_kb": 1024, "external_flash_support": true, "max_external_flash_mb": null, "dma_channels": null },
+      "peripherals": { "gpio_count": 32, "uart": 4, "spi": 4, "i2c": 4, "i2s": 1, "i3c": false, "usb": null, "sdio": false, "sd_mmc": false, "can_twai": false, "ethernet_mac": false, "camera_interface": false, "lcd_interface": null, "touch_sensor_channels": 0, "adc": { "channels": 8, "resolution_bits": 12, "sample_rate_ksps": null }, "dac": null, "pwm_channels": null, "motor_pwm": false, "mipi_csi": false, "mipi_dsi": false, "jtag": true, "pcnt": false, "rmt": false, "timer_groups": null, "watchdog_timers": null, "temperature_sensor": true, "other": ["GPS/GNSS", "PDM"] },
+      "security": { "secure_boot": true, "flash_encryption": true, "crypto_accelerator": true, "crypto_algorithms": ["AES", "SHA", "ECC", "RSA"], "tee": true, "arm_trustzone": true, "psa_certified": true, "psa_level": "Level 1", "tls_support": true, "efuse": false, "rng": true, "digital_signature": false, "secure_element": false, "secure_debug": true },
+      "power_management": { "supply_voltage_min_v": 3.0, "supply_voltage_max_v": 5.5, "dc_dc_converter": true, "active_mode_ma": null, "modem_sleep_ma": null, "light_sleep_ua": null, "deep_sleep_ua": null, "hibernate_ua": null, "shutdown_ua": null, "power_modes": ["Active", "Idle", "Sleep"], "wakeup_sources": ["GPIO", "Timer"] },
+      "package": { "package_types": ["SiP (LGA)"], "dimensions_mm": ["10x16"], "pin_count": null, "operating_temp_min_c": -40, "operating_temp_max_c": 85 },
+      "software_ecosystem": { "primary_sdk": "nRF Connect SDK", "rtos_support": ["Zephyr"], "arduino_support": false, "micropython_support": false, "circuitpython_support": false, "zephyr_support": true, "matter_sdk": false, "homekit_support": false, "ai_ml_frameworks": [], "cloud_integrations": ["AWS IoT", "Azure IoT", "nRF Cloud"], "community_size": "medium" },
+      "pricing": { "typical_1ku_usd": null, "typical_10ku_usd": null, "digikey_unit_usd": null, "pricing_notes": "SiP pricing, includes modem" },
+      "metadata": { "source_urls": ["https://www.nordicsemi.com/Products/nRF9160"], "datasheet_urls": [], "last_updated": "2026-03-07", "notes": "Cellular IoT SiP with integrated modem and GPS. No direct Espressif equivalent. Different market segment.", "confidence": "high" }
+    }
+  ]
+}

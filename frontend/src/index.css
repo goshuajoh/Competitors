@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #1a1a2e; }
+::-webkit-scrollbar-thumb { background: #4a4a6a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #6a6a8a; }
+
+/* Smooth transitions */
+* { transition: background-color 0.15s ease, border-color 0.15s ease; }
+
+/* Markdown in chat */
+.chat-markdown h1, .chat-markdown h2, .chat-markdown h3 { font-weight: 700; margin-top: 0.75em; margin-bottom: 0.25em; }
+.chat-markdown h1 { font-size: 1.25rem; }
+.chat-markdown h2 { font-size: 1.1rem; }
+.chat-markdown ul, .chat-markdown ol { padding-left: 1.5em; margin: 0.5em 0; }
+.chat-markdown li { margin: 0.15em 0; }
+.chat-markdown table { border-collapse: collapse; margin: 0.5em 0; font-size: 0.85rem; width: 100%; display: block; overflow-x: auto; }
+.chat-markdown th, .chat-markdown td { border: 1px solid #374151; padding: 4px 8px; text-align: left; }
+.chat-markdown th { background: #1f2937; font-weight: 600; }
+.chat-markdown code { background: #1f2937; padding: 1px 4px; border-radius: 3px; font-size: 0.9em; }
+.chat-markdown pre { background: #111827; padding: 0.75em; border-radius: 6px; overflow-x: auto; margin: 0.5em 0; }
+.chat-markdown pre code { background: transparent; padding: 0; }
+.chat-markdown strong { color: #60a5fa; }
+.chat-markdown p { margin: 0.4em 0; }

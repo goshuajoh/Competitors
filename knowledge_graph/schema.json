@@ -1,0 +1,386 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IoT/Embedded Chip Knowledge Graph Schema",
+  "description": "Canonical schema for competitive chip analysis across manufacturers",
+  "type": "object",
+  "properties": {
+    "manufacturer": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "manufacturer_country": {
+      "type": "string",
+      "description": "Country of origin"
+    },
+    "chips": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/chip"
+      }
+    }
+  },
+  "required": ["manufacturer", "chips"],
+  "definitions": {
+    "chip": {
+      "type": "object",
+      "properties": {
+        "chip_family": {
+          "type": "string",
+          "description": "Product family (e.g., ESP32, nRF52, STM32WB)"
+        },
+        "chip_model": {
+          "type": "string",
+          "description": "Specific model number (e.g., ESP32-S3, nRF5340)"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "nrnd", "preview", "announced", "obsolete"],
+          "description": "Production status"
+        },
+        "release_year": {
+          "type": ["integer", "null"],
+          "description": "Year of initial release or announcement"
+        },
+        "target_applications": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Target use cases (e.g., Smart Home, Wearable, Industrial)"
+        },
+        "connectivity": {
+          "$ref": "#/definitions/connectivity"
+        },
+        "processing": {
+          "$ref": "#/definitions/processing"
+        },
+        "memory": {
+          "$ref": "#/definitions/memory"
+        },
+        "peripherals": {
+          "$ref": "#/definitions/peripherals"
+        },
+        "security": {
+          "$ref": "#/definitions/security"
+        },
+        "power_management": {
+          "$ref": "#/definitions/power_management"
+        },
+        "package": {
+          "$ref": "#/definitions/package"
+        },
+        "software_ecosystem": {
+          "$ref": "#/definitions/software_ecosystem"
+        },
+        "pricing": {
+          "$ref": "#/definitions/pricing"
+        },
+        "metadata": {
+          "$ref": "#/definitions/metadata"
+        }
+      },
+      "required": ["chip_model", "chip_family", "status", "connectivity", "processing", "memory"]
+    },
+    "connectivity": {
+      "type": "object",
+      "properties": {
+        "wifi": {
+          "type": ["object", "null"],
+          "properties": {
+            "supported": { "type": "boolean" },
+            "standards": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "e.g., 802.11b, 802.11g, 802.11n, 802.11ac, 802.11ax, 802.11be"
+            },
+            "bands": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "e.g., 2.4GHz, 5GHz, 6GHz"
+            },
+            "mimo": {
+              "type": ["string", "null"],
+              "description": "e.g., 1T1R, 2T2R"
+            },
+            "max_data_rate_mbps": { "type": ["number", "null"] },
+            "wifi_generation": {
+              "type": ["string", "null"],
+              "description": "WiFi 4, WiFi 5, WiFi 6, WiFi 6E, WiFi 7"
+            },
+            "mesh_networking": { "type": ["boolean", "null"] },
+            "wifi_direct": { "type": ["boolean", "null"] }
+          }
+        },
+        "bluetooth": {
+          "type": ["object", "null"],
+          "properties": {
+            "supported": { "type": "boolean" },
+            "version": { "type": ["string", "null"], "description": "e.g., 5.0, 5.3, 5.4" },
+            "ble": { "type": "boolean" },
+            "classic": { "type": "boolean" },
+            "mesh": { "type": ["boolean", "null"] },
+            "direction_finding": { "type": ["boolean", "null"] },
+            "long_range": { "type": ["boolean", "null"] }
+          }
+        },
+        "ieee802154": {
+          "type": ["object", "null"],
+          "properties": {
+            "supported": { "type": "boolean" },
+            "thread": { "type": "boolean" },
+            "zigbee": { "type": "boolean" },
+            "matter_over_thread": { "type": ["boolean", "null"] }
+          }
+        },
+        "lora": { "type": ["boolean", "null"] },
+        "sub_ghz": {
+          "type": ["object", "null"],
+          "properties": {
+            "supported": { "type": "boolean" },
+            "frequency_bands": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "cellular": {
+          "type": ["object", "null"],
+          "properties": {
+            "supported": { "type": "boolean" },
+            "type": { "type": ["string", "null"], "description": "LTE-M, NB-IoT, Cat-1, 5G" }
+          }
+        },
+        "ethernet": { "type": ["boolean", "null"] },
+        "matter_support": { "type": ["boolean", "null"] },
+        "other_protocols": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "ESP-NOW, proprietary protocols, etc."
+        }
+      }
+    },
+    "processing": {
+      "type": "object",
+      "properties": {
+        "cpu_architecture": {
+          "type": "string",
+          "description": "e.g., Xtensa LX7, RISC-V, ARM Cortex-M4, ARM Cortex-M33"
+        },
+        "instruction_set": {
+          "type": "string",
+          "enum": ["Xtensa", "RISC-V", "ARM", "ARC", "other"]
+        },
+        "cores": { "type": "integer" },
+        "max_clock_mhz": { "type": "number" },
+        "fpu": { "type": ["boolean", "null"] },
+        "dsp": { "type": ["boolean", "null"] },
+        "npu": { "type": ["boolean", "null"] },
+        "npu_tops": { "type": ["number", "null"], "description": "TOPS rating if NPU present" },
+        "vector_extensions": { "type": ["boolean", "null"] },
+        "cache_kb": { "type": ["number", "null"] },
+        "secondary_core": {
+          "type": ["object", "null"],
+          "properties": {
+            "architecture": { "type": "string" },
+            "clock_mhz": { "type": "number" },
+            "purpose": { "type": "string" }
+          },
+          "description": "For heterogeneous multi-core chips"
+        }
+      },
+      "required": ["cpu_architecture", "cores", "max_clock_mhz"]
+    },
+    "memory": {
+      "type": "object",
+      "properties": {
+        "sram_kb": { "type": ["number", "null"] },
+        "rom_kb": { "type": ["number", "null"] },
+        "rtc_sram_kb": { "type": ["number", "null"] },
+        "psram_support": { "type": ["boolean", "null"] },
+        "max_psram_mb": { "type": ["number", "null"] },
+        "internal_flash_kb": { "type": ["number", "null"] },
+        "external_flash_support": { "type": ["boolean", "null"] },
+        "max_external_flash_mb": { "type": ["number", "null"] },
+        "dma_channels": { "type": ["integer", "null"] }
+      }
+    },
+    "peripherals": {
+      "type": "object",
+      "properties": {
+        "gpio_count": { "type": ["integer", "null"] },
+        "uart": { "type": ["integer", "null"] },
+        "spi": { "type": ["integer", "null"] },
+        "i2c": { "type": ["integer", "null"] },
+        "i2s": { "type": ["integer", "null"] },
+        "i3c": { "type": ["boolean", "null"] },
+        "usb": {
+          "type": ["object", "null"],
+          "properties": {
+            "supported": { "type": "boolean" },
+            "type": { "type": ["string", "null"], "description": "e.g., USB 2.0 OTG, USB 1.1" },
+            "host": { "type": ["boolean", "null"] },
+            "device": { "type": ["boolean", "null"] }
+          }
+        },
+        "sdio": { "type": ["boolean", "null"] },
+        "sd_mmc": { "type": ["boolean", "null"] },
+        "can_twai": { "type": ["boolean", "null"] },
+        "ethernet_mac": { "type": ["boolean", "null"] },
+        "camera_interface": { "type": ["boolean", "null"] },
+        "lcd_interface": {
+          "type": ["object", "null"],
+          "properties": {
+            "supported": { "type": "boolean" },
+            "types": { "type": "array", "items": { "type": "string" }, "description": "SPI LCD, 8080, RGB, MIPI-DSI" }
+          }
+        },
+        "touch_sensor_channels": { "type": ["integer", "null"] },
+        "adc": {
+          "type": ["object", "null"],
+          "properties": {
+            "channels": { "type": "integer" },
+            "resolution_bits": { "type": "integer" },
+            "sample_rate_ksps": { "type": ["number", "null"] }
+          }
+        },
+        "dac": {
+          "type": ["object", "null"],
+          "properties": {
+            "channels": { "type": "integer" },
+            "resolution_bits": { "type": "integer" }
+          }
+        },
+        "pwm_channels": { "type": ["integer", "null"] },
+        "motor_pwm": { "type": ["boolean", "null"] },
+        "mipi_csi": { "type": ["boolean", "null"] },
+        "mipi_dsi": { "type": ["boolean", "null"] },
+        "jtag": { "type": ["boolean", "null"] },
+        "pcnt": { "type": ["boolean", "null"], "description": "Pulse counter" },
+        "rmt": { "type": ["boolean", "null"], "description": "Remote control transceiver (IR)" },
+        "timer_groups": { "type": ["integer", "null"] },
+        "watchdog_timers": { "type": ["integer", "null"] },
+        "temperature_sensor": { "type": ["boolean", "null"] },
+        "other": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "security": {
+      "type": "object",
+      "properties": {
+        "secure_boot": { "type": ["boolean", "null"] },
+        "flash_encryption": { "type": ["boolean", "null"] },
+        "crypto_accelerator": { "type": ["boolean", "null"] },
+        "crypto_algorithms": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "AES, SHA-2, RSA, ECC, HMAC, etc."
+        },
+        "tee": { "type": ["boolean", "null"], "description": "Trusted Execution Environment" },
+        "arm_trustzone": { "type": ["boolean", "null"] },
+        "psa_certified": { "type": ["boolean", "null"] },
+        "psa_level": { "type": ["string", "null"] },
+        "tls_support": { "type": ["boolean", "null"] },
+        "efuse": { "type": ["boolean", "null"] },
+        "rng": { "type": ["boolean", "null"], "description": "Hardware random number generator" },
+        "digital_signature": { "type": ["boolean", "null"] },
+        "secure_element": { "type": ["boolean", "null"] },
+        "secure_debug": { "type": ["boolean", "null"] }
+      }
+    },
+    "power_management": {
+      "type": "object",
+      "properties": {
+        "supply_voltage_min_v": { "type": ["number", "null"] },
+        "supply_voltage_max_v": { "type": ["number", "null"] },
+        "dc_dc_converter": { "type": ["boolean", "null"] },
+        "active_mode_ma": { "type": ["number", "null"] },
+        "modem_sleep_ma": { "type": ["number", "null"] },
+        "light_sleep_ua": { "type": ["number", "null"] },
+        "deep_sleep_ua": { "type": ["number", "null"] },
+        "hibernate_ua": { "type": ["number", "null"] },
+        "shutdown_ua": { "type": ["number", "null"] },
+        "power_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "wakeup_sources": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "package": {
+      "type": "object",
+      "properties": {
+        "package_types": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "QFN, BGA, WLCSP, etc."
+        },
+        "dimensions_mm": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "e.g., 5x5, 7x7"
+        },
+        "pin_count": { "type": ["integer", "null"] },
+        "operating_temp_min_c": { "type": ["number", "null"] },
+        "operating_temp_max_c": { "type": ["number", "null"] }
+      }
+    },
+    "software_ecosystem": {
+      "type": "object",
+      "properties": {
+        "primary_sdk": { "type": ["string", "null"] },
+        "rtos_support": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "arduino_support": { "type": ["boolean", "null"] },
+        "micropython_support": { "type": ["boolean", "null"] },
+        "circuitpython_support": { "type": ["boolean", "null"] },
+        "zephyr_support": { "type": ["boolean", "null"] },
+        "matter_sdk": { "type": ["boolean", "null"] },
+        "homekit_support": { "type": ["boolean", "null"] },
+        "ai_ml_frameworks": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "cloud_integrations": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "AWS IoT, Azure IoT, Google Cloud IoT, etc."
+        },
+        "community_size": {
+          "type": ["string", "null"],
+          "enum": ["large", "medium", "small", "minimal", null]
+        }
+      }
+    },
+    "pricing": {
+      "type": "object",
+      "properties": {
+        "typical_1ku_usd": { "type": ["number", "null"] },
+        "typical_10ku_usd": { "type": ["number", "null"] },
+        "digikey_unit_usd": { "type": ["number", "null"] },
+        "pricing_notes": { "type": ["string", "null"] }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "source_urls": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "datasheet_urls": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "last_updated": { "type": "string", "format": "date" },
+        "notes": { "type": ["string", "null"] },
+        "confidence": {
+          "type": "string",
+          "enum": ["verified", "high", "medium", "low"],
+          "description": "Data confidence level"
+        }
+      }
+    }
+  }
+}

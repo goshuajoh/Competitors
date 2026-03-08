@@ -1,0 +1,34 @@
+{
+  "manufacturer": "Realtek Semiconductor",
+  "manufacturer_country": "Taiwan",
+  "chips": [
+    {
+      "chip_family": "AmebaD", "chip_model": "RTL8720DN", "status": "active", "release_year": 2020,
+      "target_applications": ["Smart Home", "IoT Gateway", "Consumer Electronics"],
+      "connectivity": { "wifi": { "supported": true, "standards": ["802.11a", "802.11b", "802.11g", "802.11n"], "bands": ["2.4GHz", "5GHz"], "mimo": "1T1R", "max_data_rate_mbps": 150, "wifi_generation": "WiFi 4", "mesh_networking": false, "wifi_direct": false }, "bluetooth": { "supported": true, "version": "5.0", "ble": true, "classic": false, "mesh": false, "direction_finding": false, "long_range": false }, "ieee802154": null, "lora": false, "sub_ghz": null, "cellular": null, "ethernet": false, "matter_support": false, "other_protocols": [] },
+      "processing": { "cpu_architecture": "ARM Cortex-M33 (KM4) + Cortex-M23 (KM0)", "instruction_set": "ARM", "cores": 2, "max_clock_mhz": 200, "fpu": true, "dsp": false, "npu": false, "npu_tops": null, "vector_extensions": false, "cache_kb": null, "secondary_core": { "architecture": "ARM Cortex-M23 (KM0)", "clock_mhz": null, "purpose": "Low-power core" } },
+      "memory": { "sram_kb": null, "rom_kb": null, "rtc_sram_kb": null, "psram_support": false, "max_psram_mb": null, "internal_flash_kb": 8192, "external_flash_support": true, "max_external_flash_mb": null, "dma_channels": null },
+      "peripherals": { "gpio_count": 13, "uart": 2, "spi": 1, "i2c": 1, "i2s": 0, "i3c": false, "usb": null, "sdio": false, "sd_mmc": false, "can_twai": false, "ethernet_mac": false, "camera_interface": false, "lcd_interface": null, "touch_sensor_channels": 0, "adc": { "channels": 1, "resolution_bits": null, "sample_rate_ksps": null }, "dac": null, "pwm_channels": 5, "motor_pwm": false, "mipi_csi": false, "mipi_dsi": false, "jtag": true, "pcnt": false, "rmt": false, "timer_groups": null, "watchdog_timers": null, "temperature_sensor": false, "other": ["RGB LED controller"] },
+      "security": { "secure_boot": true, "flash_encryption": true, "crypto_accelerator": true, "crypto_algorithms": ["AES", "SHA"], "tee": true, "arm_trustzone": true, "psa_certified": false, "psa_level": null, "tls_support": true, "efuse": false, "rng": true, "digital_signature": false, "secure_element": false, "secure_debug": false },
+      "power_management": { "supply_voltage_min_v": 3.0, "supply_voltage_max_v": 3.6, "dc_dc_converter": false, "active_mode_ma": null, "modem_sleep_ma": null, "light_sleep_ua": null, "deep_sleep_ua": null, "hibernate_ua": null, "shutdown_ua": null, "power_modes": ["Active", "Sleep"], "wakeup_sources": ["GPIO", "Timer"] },
+      "package": { "package_types": ["QFN48"], "dimensions_mm": ["6x6"], "pin_count": 48, "operating_temp_min_c": -40, "operating_temp_max_c": 85 },
+      "software_ecosystem": { "primary_sdk": "Ameba SDK", "rtos_support": ["FreeRTOS"], "arduino_support": true, "micropython_support": true, "circuitpython_support": false, "zephyr_support": false, "matter_sdk": false, "homekit_support": false, "ai_ml_frameworks": [], "cloud_integrations": [], "community_size": "small" },
+      "pricing": { "typical_1ku_usd": null, "typical_10ku_usd": null, "digikey_unit_usd": null, "pricing_notes": "Modules from $4" },
+      "metadata": { "source_urls": ["https://www.amebaiot.com/en/amebad/"], "datasheet_urls": [], "last_updated": "2026-03-07", "notes": "Dual-band WiFi + BLE with ARM Cortex-M33/M23. TrustZone security. Smaller community and ecosystem than ESP32. Used heavily in Tuya smart home products.", "confidence": "medium" }
+    },
+    {
+      "chip_family": "AmebaZ2", "chip_model": "RTL8720CF", "status": "active", "release_year": 2021,
+      "target_applications": ["Smart Home", "Smart Plugs", "Smart Bulbs", "IoT Sensors"],
+      "connectivity": { "wifi": { "supported": true, "standards": ["802.11b", "802.11g", "802.11n"], "bands": ["2.4GHz"], "mimo": "1T1R", "max_data_rate_mbps": 72, "wifi_generation": "WiFi 4", "mesh_networking": false, "wifi_direct": false }, "bluetooth": null, "ieee802154": null, "lora": false, "sub_ghz": null, "cellular": null, "ethernet": false, "matter_support": false, "other_protocols": [] },
+      "processing": { "cpu_architecture": "ARM Cortex-M33 (KM4) + Cortex-M23 (KM0)", "instruction_set": "ARM", "cores": 2, "max_clock_mhz": null, "fpu": false, "dsp": false, "npu": false, "npu_tops": null, "vector_extensions": false, "cache_kb": null, "secondary_core": null },
+      "memory": { "sram_kb": 256, "rom_kb": null, "rtc_sram_kb": null, "psram_support": false, "max_psram_mb": null, "internal_flash_kb": null, "external_flash_support": true, "max_external_flash_mb": null, "dma_channels": null },
+      "peripherals": { "gpio_count": null, "uart": 3, "spi": 1, "i2c": 1, "i2s": 0, "i3c": false, "usb": null, "sdio": true, "sd_mmc": false, "can_twai": false, "ethernet_mac": false, "camera_interface": false, "lcd_interface": null, "touch_sensor_channels": 0, "adc": null, "dac": null, "pwm_channels": 1, "motor_pwm": false, "mipi_csi": false, "mipi_dsi": false, "jtag": true, "pcnt": false, "rmt": false, "timer_groups": null, "watchdog_timers": null, "temperature_sensor": false, "other": [] },
+      "security": { "secure_boot": true, "flash_encryption": true, "crypto_accelerator": false, "crypto_algorithms": ["AES"], "tee": true, "arm_trustzone": true, "psa_certified": false, "psa_level": null, "tls_support": true, "efuse": false, "rng": false, "digital_signature": false, "secure_element": false, "secure_debug": false },
+      "power_management": { "supply_voltage_min_v": 3.0, "supply_voltage_max_v": 3.6, "dc_dc_converter": false, "active_mode_ma": null, "modem_sleep_ma": null, "light_sleep_ua": null, "deep_sleep_ua": null, "hibernate_ua": null, "shutdown_ua": null, "power_modes": ["Active", "Sleep"], "wakeup_sources": ["GPIO", "Timer"] },
+      "package": { "package_types": ["QFN32"], "dimensions_mm": ["4x4"], "pin_count": 32, "operating_temp_min_c": -40, "operating_temp_max_c": 85 },
+      "software_ecosystem": { "primary_sdk": "Ameba SDK", "rtos_support": ["FreeRTOS"], "arduino_support": true, "micropython_support": false, "circuitpython_support": false, "zephyr_support": false, "matter_sdk": false, "homekit_support": false, "ai_ml_frameworks": [], "cloud_integrations": [], "community_size": "small" },
+      "pricing": { "typical_1ku_usd": null, "typical_10ku_usd": null, "digikey_unit_usd": null, "pricing_notes": "Low-cost, used in Tuya/Beken smart home" },
+      "metadata": { "source_urls": ["https://www.amebaiot.com/en/amebaz2/"], "datasheet_urls": [], "last_updated": "2026-03-07", "notes": "WiFi-only variant. Cost competitor to ESP32-C2. Widely used in Tuya and smart home OEM products. Limited community.", "confidence": "medium" }
+    }
+  ]
+}
