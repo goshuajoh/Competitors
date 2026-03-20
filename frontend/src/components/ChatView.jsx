@@ -286,7 +286,7 @@ function MessageBubble({ message, streaming }) {
           <p className="whitespace-pre-wrap">{message.content}</p>
         ) : (
           <div className="chat-markdown">
-            <ReactMarkdown>{message.content}</ReactMarkdown>
+            <ReactMarkdown components={{ table: ({ children }) => <div className="table-wrapper"><table>{children}</table></div> }}>{message.content}</ReactMarkdown>
             {streaming && <span className="inline-block w-2 h-4 bg-blue-400 animate-pulse ml-0.5" />}
           </div>
         )}

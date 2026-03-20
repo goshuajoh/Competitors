@@ -109,47 +109,44 @@ export default function Dashboard({ data }) {
         </div>
       </div>
 
-      {/* Architecture + Threats Row */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-        {/* Architecture pie */}
-        <div className="bg-gray-900 rounded-xl border border-gray-800 p-5">
-          <h3 className="text-sm font-semibold text-gray-300 mb-4">CPU Architecture Distribution</h3>
-          <ResponsiveContainer width="100%" height={280}>
-            <PieChart>
-              <Pie
-                data={archData}
-                cx="50%" cy="50%"
-                outerRadius={100}
-                dataKey="value"
-                label={({ name, value }) => `${name} (${value})`}
-                labelLine={false}
-                fontSize={11}
-              >
-                {archData.map((_, i) => (
-                  <Cell key={i} fill={COLORS[i % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip contentStyle={{ background: '#1f2937', border: '1px solid #374151', borderRadius: 8, fontSize: 13 }} />
-            </PieChart>
-          </ResponsiveContainer>
-        </div>
+      {/* CPU Architecture — full-width */}
+      <div className="bg-gray-900 rounded-xl border border-gray-800 p-5 mb-8">
+        <h3 className="text-sm font-semibold text-gray-300 mb-4">CPU Architecture Distribution</h3>
+        <ResponsiveContainer width="100%" height={450}>
+          <PieChart>
+            <Pie
+              data={archData}
+              cx="50%" cy="50%"
+              outerRadius={170}
+              dataKey="value"
+              label={({ name, value }) => `${name} (${value})`}
+              labelLine={true}
+              fontSize={12}
+            >
+              {archData.map((_, i) => (
+                <Cell key={i} fill={COLORS[i % COLORS.length]} />
+              ))}
+            </Pie>
+            <Tooltip contentStyle={{ background: '#1f2937', border: '1px solid #374151', borderRadius: 8, fontSize: 13 }} />
+          </PieChart>
+        </ResponsiveContainer>
+      </div>
 
-        {/* Threat rankings */}
-        <div className="bg-gray-900 rounded-xl border border-gray-800 p-5">
-          <h3 className="text-sm font-semibold text-gray-300 mb-4">Competitor Threat Ranking</h3>
-          <div className="space-y-2 max-h-[280px] overflow-y-auto">
-            {threatReports.map((r) => (
-              <div key={r.manufacturer} className={`flex items-center justify-between px-3 py-2 rounded-lg ${THREAT_BG[r.threatLevel]}`}>
-                <div>
-                  <span className="text-sm text-white font-medium">{r.manufacturer}</span>
-                  <span className="text-xs text-gray-500 ml-2">{r.chipCount} chips</span>
-                </div>
-                <span className={`text-xs font-bold uppercase ${THREAT_COLORS[r.threatLevel]}`}>
-                  {r.threatLevel}
-                </span>
+      {/* Threat rankings */}
+      <div className="bg-gray-900 rounded-xl border border-gray-800 p-5 mb-8">
+        <h3 className="text-sm font-semibold text-gray-300 mb-4">Competitor Threat Ranking</h3>
+        <div className="space-y-2 max-h-[350px] overflow-y-auto">
+          {threatReports.map((r) => (
+            <div key={r.manufacturer} className={`flex items-center justify-between px-3 py-2 rounded-lg ${THREAT_BG[r.threatLevel]}`}>
+              <div>
+                <span className="text-sm text-white font-medium">{r.manufacturer}</span>
+                <span className="text-xs text-gray-500 ml-2">{r.chipCount} chips</span>
               </div>
-            ))}
-          </div>
+              <span className={`text-xs font-bold uppercase ${THREAT_COLORS[r.threatLevel]}`}>
+                {r.threatLevel}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
 
