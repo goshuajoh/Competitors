@@ -44,12 +44,16 @@ export default function Dashboard({ data }) {
     [data]
   );
 
-  const archData = useMemo(() =>
-    Object.entries(summary.architectures)
-      .map(([name, count]) => ({ name: name.length > 20 ? name.slice(0, 18) + '...' : name, value: count }))
-      .sort((a, b) => b.value - a.value),
-    [summary]
-  );
+  const archData = useMemo(() => {
+    const sorted = Object.entries(summary.architectures)
+      .map(([name, count]) => ({ name, value: count }))
+      .sort((a, b) => b.value - a.value);
+    // Group entries with count <= 1 into "Other"
+    const main = sorted.filter((d) => d.value > 1);
+    const otherSum = sorted.filter((d) => d.value <= 1).reduce((s, d) => s + d.value, 0);
+    if (otherSum > 0) main.push({ name: 'Other', value: otherSum });
+    return main;
+  }, [summary]);
 
   const protocolData = useMemo(() =>
     Object.entries(summary.protocols).map(([name, { esp, comp }]) => ({
@@ -109,27 +113,46 @@ export default function Dashboard({ data }) {
         </div>
       </div>
 
-      {/* CPU Architecture — full-width */}
+      {/* CPU Architecture — full-width with side legend */}
       <div className="bg-gray-900 rounded-xl border border-gray-800 p-5 mb-8">
         <h3 className="text-sm font-semibold text-gray-300 mb-4">CPU Architecture Distribution</h3>
-        <ResponsiveContainer width="100%" height={450}>
-          <PieChart>
-            <Pie
-              data={archData}
-              cx="50%" cy="50%"
-              outerRadius={170}
-              dataKey="value"
-              label={({ name, value }) => `${name} (${value})`}
-              labelLine={true}
-              fontSize={12}
-            >
-              {archData.map((_, i) => (
-                <Cell key={i} fill={COLORS[i % COLORS.length]} />
-              ))}
-            </Pie>
-            <Tooltip contentStyle={{ background: '#1f2937', border: '1px solid #374151', borderRadius: 8, fontSize: 13 }} />
-          </PieChart>
-        </ResponsiveContainer>
+        <div className="flex flex-col lg:flex-row items-center gap-6">
+          <div className="w-full lg:w-1/2" style={{ minHeight: 350 }}>
+            <ResponsiveContainer width="100%" height={350}>
+              <PieChart>
+                <Pie
+                  data={archData}
+                  cx="50%" cy="50%"
+                  outerRadius={140}
+                  innerRadius={60}
+                  dataKey="value"
+                  label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
+                  labelLine={false}
+                  fontSize={11}
+                  stroke="#111827"
+                  strokeWidth={2}
+                >
+                  {archData.map((_, i) => (
+                    <Cell key={i} fill={COLORS[i % COLORS.length]} />
+                  ))}
+                </Pie>
+                <Tooltip
+                  contentStyle={{ background: '#1f2937', border: '1px solid #374151', borderRadius: 8, fontSize: 13 }}
+                  formatter={(value, name) => [`${value} chips`, name]}
+                />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+          <div className="w-full lg:w-1/2 grid grid-cols-2 gap-x-4 gap-y-1.5">
+            {archData.map((entry, i) => (
+              <div key={entry.name} className="flex items-center gap-2 text-sm">
+                <span className="w-3 h-3 rounded-sm shrink-0" style={{ backgroundColor: COLORS[i % COLORS.length] }} />
+                <span className="text-gray-300 truncate">{entry.name}</span>
+                <span className="text-gray-500 ml-auto shrink-0">{entry.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Threat rankings */}
