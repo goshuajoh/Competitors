@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useMemo } from 'react';
 import { Send, Bot, User, Zap, Loader2, ChevronDown } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { fuzzyFind } from '../lib/chipData';
 
 const QUICK_PROMPTS = [
@@ -286,7 +287,7 @@ function MessageBubble({ message, streaming }) {
           <p className="whitespace-pre-wrap">{message.content}</p>
         ) : (
           <div className="chat-markdown">
-            <ReactMarkdown components={{ table: ({ children }) => <div className="table-wrapper"><table>{children}</table></div> }}>{message.content}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]} components={{ table: ({ children }) => <div className="table-wrapper"><table>{children}</table></div> }}>{message.content}</ReactMarkdown>
             {streaming && <span className="inline-block w-2 h-4 bg-blue-400 animate-pulse ml-0.5" />}
           </div>
         )}
