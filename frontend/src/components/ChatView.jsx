@@ -61,17 +61,21 @@ export default function ChatView({ data }) {
       // Return a light summary of all manufacturers
       const summary = {};
       for (const [mfr, mfrChips] of data.chipsByManufacturer.entries()) {
-        summary[mfr] = mfrChips.map((c) => ({
-          model: c.chip_model,
-          wifi: !!c.connectivity?.wifi?.supported,
-          ble: !!c.connectivity?.bluetooth?.supported,
-          thread: (c.connectivity?.ieee802154?.protocols || []).some((p) => p.toLowerCase().includes('thread')),
-          matter: !!c.connectivity?.matter_support,
-          cpu_mhz: c.processing?.max_clock_mhz,
-          sram_kb: c.memory?.sram_kb,
-          arch: c.processing?.cpu_architecture,
-          status: c.status,
-        }));
+        summary[mfr] = mfrChips.map((c) => {
+          const ieee = c.connectivity?.ieee802154;
+          return {
+            model: c.chip_model,
+            wifi: !!c.connectivity?.wifi?.supported,
+            ble: !!c.connectivity?.bluetooth?.supported,
+            thread: !!ieee?.thread || (ieee?.protocols || []).some((p) => p.toLowerCase().includes('thread')),
+            matter: !!c.connectivity?.matter_support,
+            matter_over_thread: !!ieee?.matter_over_thread,
+            cpu_mhz: c.processing?.max_clock_mhz,
+            sram_kb: c.memory?.sram_kb,
+            arch: c.processing?.cpu_architecture,
+            status: c.status,
+          };
+        });
       }
       return { type: 'summary', data: summary };
     }

@@ -7,6 +7,7 @@ import ChipBrowser from './components/ChipBrowser';
 import CompareView from './components/CompareView';
 import RecommendView from './components/RecommendView';
 import ChatView from './components/ChatView';
+import GraphView from './components/GraphView';
 import LoginPage from './components/LoginPage';
 
 export default function App() {
@@ -93,6 +94,7 @@ export default function App() {
           }
         />
         <Route path="recommend" element={<RecommendView data={data} />} />
+        <Route path="graph" element={<GraphView data={data} />} />
         <Route path="chat" element={<ChatView data={data} />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>

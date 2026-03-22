@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import { LayoutDashboard, List, GitCompareArrows, Lightbulb, MessageSquare, Menu, X } from 'lucide-react';
+import { LayoutDashboard, List, GitCompareArrows, Lightbulb, Share2, MessageSquare, Menu, X } from 'lucide-react';
 
 const navItems = [
   { to: '/', icon: LayoutDashboard, label: 'Dashboard', end: true },
   { to: '/browse', icon: List, label: 'Browse' },
   { to: '/compare', icon: GitCompareArrows, label: 'Compare' },
   { to: '/recommend', icon: Lightbulb, label: 'Recommend' },
+  { to: '/graph', icon: Share2, label: 'Graph' },
   { to: '/chat', icon: MessageSquare, label: 'AI Chat' },
 ];
 
