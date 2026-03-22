@@ -17,13 +17,26 @@ let _cache = null;
 export async function loadAllChipData() {
   if (_cache) return _cache;
 
-  const results = await Promise.all(
-    MANUFACTURER_FILES.map(async (name) => {
-      const resp = await fetch(`/data/${name}.json`);
-      const data = await resp.json();
-      return { file: name, ...data };
-    })
-  );
+  const [results, datasheetIndex] = await Promise.all([
+    Promise.all(
+      MANUFACTURER_FILES.map(async (name) => {
+        const resp = await fetch(`/data/${name}.json`);
+        const data = await resp.json();
+        return { file: name, ...data };
+      })
+    ),
+    fetch('/data/datasheets.json').then((r) => r.json()).catch(() => ({ datasheets: {} })),
+  ]);
+
+  // Build a lookup: chip_model -> datasheet_url
+  const datasheetMap = new Map();
+  for (const [, sheets] of Object.entries(datasheetIndex.datasheets || {})) {
+    for (const entry of sheets) {
+      if (entry.datasheet_url) {
+        datasheetMap.set(entry.chip_model.toUpperCase(), entry.datasheet_url);
+      }
+    }
+  }
 
   const chipsByModel = new Map();
   const chipsByManufacturer = new Map();
@@ -41,6 +54,7 @@ export async function loadAllChipData() {
         _manufacturer: mfr,
         _country: country,
         _file: mfrData.file,
+        _datasheet_url: datasheetMap.get(chip.chip_model.toUpperCase()) || null,
       };
       chipsByModel.set(chip.chip_model.toUpperCase(), enriched);
       mfrChips.push(enriched);
@@ -83,8 +97,7 @@ export function filterChips(allChips, filters = {}) {
     if (filters.thread) {
       const ieee = conn.ieee802154;
       if (!ieee || !ieee.supported) return false;
-      const protos = ieee.protocols || [];
-      if (!protos.some((p) => p.toLowerCase().includes('thread'))) return false;
+      if (!ieee.thread && !(ieee.protocols || []).some((p) => p.toLowerCase().includes('thread'))) return false;
     }
     if (filters.matter && !conn.matter_support) return false;
     if (filters.arch && proc.instruction_set !== filters.arch) return false;
@@ -111,13 +124,13 @@ export function hasBle(chip) {
 export function hasThread(chip) {
   const i = chip?.connectivity?.ieee802154;
   if (!i || !i.supported) return false;
-  return (i.protocols || []).some((p) => p.toLowerCase().includes('thread'));
+  return !!i.thread || (i.protocols || []).some((p) => p.toLowerCase().includes('thread'));
 }
 
 export function hasZigbee(chip) {
   const i = chip?.connectivity?.ieee802154;
   if (!i || !i.supported) return false;
-  return (i.protocols || []).some((p) => p.toLowerCase().includes('zigbee'));
+  return !!i.zigbee || (i.protocols || []).some((p) => p.toLowerCase().includes('zigbee'));
 }
 
 export function hasMatter(chip) {

@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Search, Plus, Minus, ChevronUp, ChevronDown, X } from 'lucide-react';
+import { Search, Plus, Minus, ChevronUp, ChevronDown, X, FileText } from 'lucide-react';
 import { fuzzyFind, filterChips, hasWifi, hasBle, hasThread, hasMatter, getCpuMhz, getSramKb, getArch } from '../lib/chipData';
 import ChipDetail from './ChipDetail';
 
@@ -137,7 +137,23 @@ export default function ChipBrowser({ data, compareList, setCompareList }) {
                       {isInCompare(chip) ? <Minus size={14} /> : <Plus size={14} />}
                     </button>
                   </td>
-                  <td className="py-2 px-3 text-white font-medium">{chip.chip_model}</td>
+                  <td className="py-2 px-3 text-white font-medium">
+                    <span className="flex items-center gap-1.5">
+                      {chip.chip_model}
+                      {chip._datasheet_url && (
+                        <a
+                          href={chip._datasheet_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-blue-400/60 hover:text-blue-400 transition-colors"
+                          title="View datasheet"
+                        >
+                          <FileText size={13} />
+                        </a>
+                      )}
+                    </span>
+                  </td>
                   <td className="py-2 px-3 text-gray-300">{chip._manufacturer}</td>
                   <td className="py-2 px-3 text-gray-400 text-xs hidden md:table-cell">{getArch(chip)}</td>
                   <td className="py-2 px-3 text-gray-300 text-right">{getCpuMhz(chip) || '—'}</td>

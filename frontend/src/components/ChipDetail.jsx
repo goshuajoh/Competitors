@@ -1,4 +1,4 @@
-import { X, ExternalLink } from 'lucide-react';
+import { X, ExternalLink, FileText } from 'lucide-react';
 import { flatten } from '../lib/compare';
 
 const SECTIONS = [
@@ -37,10 +37,21 @@ export default function ChipDetail({ chip, onClose }) {
 
         <div className="p-4 space-y-6">
           {/* Quick info */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 items-center">
             <Badge label={chip.status} />
             {chip.release_year && <Badge label={`${chip.release_year}`} />}
             {meta.confidence && <Badge label={`confidence: ${meta.confidence}`} />}
+            {chip._datasheet_url && (
+              <a
+                href={chip._datasheet_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs bg-blue-600/20 text-blue-400 hover:bg-blue-600/30 px-3 py-1 rounded-full transition-colors"
+              >
+                <FileText size={12} />
+                Datasheet
+              </a>
+            )}
           </div>
 
           {chip.target_applications?.length > 0 && (

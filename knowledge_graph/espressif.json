@@ -7,12 +7,22 @@
       "chip_model": "ESP8266EX",
       "status": "nrnd",
       "release_year": 2014,
-      "target_applications": ["Smart Home", "IoT Sensors", "Consumer Electronics"],
+      "target_applications": [
+        "Smart Home",
+        "IoT Sensors",
+        "Consumer Electronics"
+      ],
       "connectivity": {
         "wifi": {
           "supported": true,
-          "standards": ["802.11b", "802.11g", "802.11n"],
-          "bands": ["2.4GHz"],
+          "standards": [
+            "802.11b",
+            "802.11g",
+            "802.11n"
+          ],
+          "bands": [
+            "2.4GHz"
+          ],
           "mimo": null,
           "max_data_rate_mbps": 72.2,
           "wifi_generation": "WiFi 4",
@@ -26,7 +36,9 @@
         "cellular": null,
         "ethernet": false,
         "matter_support": false,
-        "other_protocols": ["ESP-NOW"]
+        "other_protocols": [
+          "ESP-NOW"
+        ]
       },
       "processing": {
         "cpu_architecture": "Tensilica L106",
@@ -67,7 +79,11 @@
         "camera_interface": false,
         "lcd_interface": null,
         "touch_sensor_channels": 0,
-        "adc": { "channels": 1, "resolution_bits": 10, "sample_rate_ksps": null },
+        "adc": {
+          "channels": 1,
+          "resolution_bits": 10,
+          "sample_rate_ksps": null
+        },
         "dac": null,
         "pwm_channels": 4,
         "motor_pwm": false,
@@ -107,19 +123,33 @@
         "deep_sleep_ua": 20,
         "hibernate_ua": null,
         "shutdown_ua": null,
-        "power_modes": ["Active", "Modem Sleep", "Light Sleep", "Deep Sleep"],
-        "wakeup_sources": ["GPIO", "Timer"]
+        "power_modes": [
+          "Active",
+          "Modem Sleep",
+          "Light Sleep",
+          "Deep Sleep"
+        ],
+        "wakeup_sources": [
+          "GPIO",
+          "Timer"
+        ]
       },
       "package": {
-        "package_types": ["QFN32"],
-        "dimensions_mm": ["5x5"],
+        "package_types": [
+          "QFN32"
+        ],
+        "dimensions_mm": [
+          "5x5"
+        ],
         "pin_count": 32,
         "operating_temp_min_c": -40,
         "operating_temp_max_c": 85
       },
       "software_ecosystem": {
         "primary_sdk": "ESP8266 RTOS SDK",
-        "rtos_support": ["FreeRTOS"],
+        "rtos_support": [
+          "FreeRTOS"
+        ],
         "arduino_support": true,
         "micropython_support": true,
         "circuitpython_support": false,
@@ -127,7 +157,10 @@
         "matter_sdk": false,
         "homekit_support": false,
         "ai_ml_frameworks": [],
-        "cloud_integrations": ["AWS IoT", "Alibaba Cloud"],
+        "cloud_integrations": [
+          "AWS IoT",
+          "Alibaba Cloud"
+        ],
         "community_size": "large"
       },
       "pricing": {
@@ -137,8 +170,12 @@
         "pricing_notes": "Very low cost, legacy product"
       },
       "metadata": {
-        "source_urls": ["https://www.espressif.com/en/products/socs/esp8266"],
-        "datasheet_urls": ["https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf"],
+        "source_urls": [
+          "https://www.espressif.com/en/products/socs/esp8266"
+        ],
+        "datasheet_urls": [
+          "https://www.espressif.com/sites/default/files/documentation/0a-esp8266ex_datasheet_en.pdf"
+        ],
         "last_updated": "2026-03-07",
         "notes": "Legacy product, recommend migration to ESP32-C2/C3",
         "confidence": "high"
@@ -149,12 +186,24 @@
       "chip_model": "ESP32",
       "status": "active",
       "release_year": 2016,
-      "target_applications": ["Smart Home", "IoT", "Wearables", "Audio", "Consumer Electronics"],
+      "target_applications": [
+        "Smart Home",
+        "IoT",
+        "Wearables",
+        "Audio",
+        "Consumer Electronics"
+      ],
       "connectivity": {
         "wifi": {
           "supported": true,
-          "standards": ["802.11b", "802.11g", "802.11n"],
-          "bands": ["2.4GHz"],
+          "standards": [
+            "802.11b",
+            "802.11g",
+            "802.11n"
+          ],
+          "bands": [
+            "2.4GHz"
+          ],
           "mimo": "1T1R",
           "max_data_rate_mbps": 150,
           "wifi_generation": "WiFi 4",
@@ -176,7 +225,10 @@
         "cellular": null,
         "ethernet": true,
         "matter_support": false,
-        "other_protocols": ["ESP-NOW", "ESP-MESH"]
+        "other_protocols": [
+          "ESP-NOW",
+          "ESP-MESH"
+        ]
       },
       "processing": {
         "cpu_architecture": "Xtensa LX6",
@@ -217,8 +269,15 @@
         "camera_interface": true,
         "lcd_interface": null,
         "touch_sensor_channels": 10,
-        "adc": { "channels": 18, "resolution_bits": 12, "sample_rate_ksps": null },
-        "dac": { "channels": 2, "resolution_bits": 8 },
+        "adc": {
+          "channels": 18,
+          "resolution_bits": 12,
+          "sample_rate_ksps": null
+        },
+        "dac": {
+          "channels": 2,
+          "resolution_bits": 8
+        },
         "pwm_channels": 16,
         "motor_pwm": true,
         "mipi_csi": false,
@@ -229,13 +288,20 @@
         "timer_groups": 2,
         "watchdog_timers": 3,
         "temperature_sensor": true,
-        "other": ["IR remote", "Hall sensor"]
+        "other": [
+          "IR remote",
+          "Hall sensor"
+        ]
       },
       "security": {
         "secure_boot": true,
         "flash_encryption": true,
         "crypto_accelerator": true,
-        "crypto_algorithms": ["AES", "SHA", "RSA"],
+        "crypto_algorithms": [
+          "AES",
+          "SHA",
+          "RSA"
+        ],
         "tee": false,
         "arm_trustzone": false,
         "psa_certified": false,
@@ -257,38 +323,68 @@
         "deep_sleep_ua": 10,
         "hibernate_ua": 5,
         "shutdown_ua": 1,
-        "power_modes": ["Active", "Modem Sleep", "Light Sleep", "Deep Sleep", "Hibernation"],
-        "wakeup_sources": ["GPIO", "Timer", "Touch", "ULP"]
+        "power_modes": [
+          "Active",
+          "Modem Sleep",
+          "Light Sleep",
+          "Deep Sleep",
+          "Hibernation"
+        ],
+        "wakeup_sources": [
+          "GPIO",
+          "Timer",
+          "Touch",
+          "ULP"
+        ]
       },
       "package": {
-        "package_types": ["QFN48"],
-        "dimensions_mm": ["6x6", "5x5"],
+        "package_types": [
+          "QFN48"
+        ],
+        "dimensions_mm": [
+          "6x6",
+          "5x5"
+        ],
         "pin_count": 48,
         "operating_temp_min_c": -40,
         "operating_temp_max_c": 85
       },
       "software_ecosystem": {
         "primary_sdk": "ESP-IDF",
-        "rtos_support": ["FreeRTOS"],
+        "rtos_support": [
+          "FreeRTOS"
+        ],
         "arduino_support": true,
         "micropython_support": true,
         "circuitpython_support": true,
         "zephyr_support": true,
         "matter_sdk": false,
         "homekit_support": true,
-        "ai_ml_frameworks": ["TensorFlow Lite Micro"],
-        "cloud_integrations": ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Alibaba Cloud"],
+        "ai_ml_frameworks": [
+          "TensorFlow Lite Micro"
+        ],
+        "cloud_integrations": [
+          "AWS IoT",
+          "Azure IoT",
+          "Google Cloud IoT",
+          "Alibaba Cloud"
+        ],
         "community_size": "large"
       },
       "pricing": {
-        "typical_1ku_usd": 1.80,
+        "typical_1ku_usd": 1.8,
         "typical_10ku_usd": null,
-        "digikey_unit_usd": 3.10,
+        "digikey_unit_usd": 3.1,
         "pricing_notes": null
       },
       "metadata": {
-        "source_urls": ["https://www.espressif.com/en/products/socs/esp32", "https://github.com/artkeller/ESP32Features"],
-        "datasheet_urls": ["https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf"],
+        "source_urls": [
+          "https://www.espressif.com/en/products/socs/esp32",
+          "https://github.com/artkeller/ESP32Features"
+        ],
+        "datasheet_urls": [
+          "https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf"
+        ],
         "last_updated": "2026-03-07",
         "notes": "Flagship legacy product, extremely popular with hobbyists and in production",
         "confidence": "high"
@@ -299,12 +395,23 @@
       "chip_model": "ESP32-S2",
       "status": "active",
       "release_year": 2020,
-      "target_applications": ["Smart Home", "IoT Sensors", "HMI", "Touchscreen"],
+      "target_applications": [
+        "Smart Home",
+        "IoT Sensors",
+        "HMI",
+        "Touchscreen"
+      ],
       "connectivity": {
         "wifi": {
           "supported": true,
-          "standards": ["802.11b", "802.11g", "802.11n"],
-          "bands": ["2.4GHz"],
+          "standards": [
+            "802.11b",
+            "802.11g",
+            "802.11n"
+          ],
+          "bands": [
+            "2.4GHz"
+          ],
           "mimo": "1T1R",
           "max_data_rate_mbps": 150,
           "wifi_generation": "WiFi 4",
@@ -318,7 +425,10 @@
         "cellular": null,
         "ethernet": false,
         "matter_support": false,
-        "other_protocols": ["ESP-NOW", "ESP-MESH"]
+        "other_protocols": [
+          "ESP-NOW",
+          "ESP-MESH"
+        ]
       },
       "processing": {
         "cpu_architecture": "Xtensa LX7",
@@ -355,16 +465,35 @@
         "i2c": 2,
         "i2s": 1,
         "i3c": false,
-        "usb": { "supported": true, "type": "USB 1.1 OTG Full-Speed", "host": true, "device": true },
+        "usb": {
+          "supported": true,
+          "type": "USB 1.1 OTG Full-Speed",
+          "host": true,
+          "device": true
+        },
         "sdio": true,
         "sd_mmc": false,
         "can_twai": false,
         "ethernet_mac": false,
         "camera_interface": true,
-        "lcd_interface": { "supported": true, "types": ["SPI LCD", "8080", "RGB"] },
+        "lcd_interface": {
+          "supported": true,
+          "types": [
+            "SPI LCD",
+            "8080",
+            "RGB"
+          ]
+        },
         "touch_sensor_channels": 14,
-        "adc": { "channels": 20, "resolution_bits": 13, "sample_rate_ksps": null },
-        "dac": { "channels": 2, "resolution_bits": 8 },
+        "adc": {
+          "channels": 20,
+          "resolution_bits": 13,
+          "sample_rate_ksps": null
+        },
+        "dac": {
+          "channels": 2,
+          "resolution_bits": 8
+        },
         "pwm_channels": 8,
         "motor_pwm": false,
         "mipi_csi": false,
@@ -381,7 +510,12 @@
         "secure_boot": true,
         "flash_encryption": true,
         "crypto_accelerator": true,
-        "crypto_algorithms": ["AES-XTS", "SHA", "RSA", "HMAC"],
+        "crypto_algorithms": [
+          "AES-XTS",
+          "SHA",
+          "RSA",
+          "HMAC"
+        ],
         "tee": false,
         "arm_trustzone": false,
         "psa_certified": false,
@@ -394,7 +528,7 @@
         "secure_debug": false
       },
       "power_management": {
-        "supply_voltage_min_v": 3.0,
+        "supply_voltage_min_v": 3,
         "supply_voltage_max_v": 3.6,
         "dc_dc_converter": false,
         "active_mode_ma": null,
@@ -403,19 +537,35 @@
         "deep_sleep_ua": 20,
         "hibernate_ua": null,
         "shutdown_ua": null,
-        "power_modes": ["Active", "Modem Sleep", "Light Sleep", "Deep Sleep"],
-        "wakeup_sources": ["GPIO", "Timer", "Touch", "ULP"]
+        "power_modes": [
+          "Active",
+          "Modem Sleep",
+          "Light Sleep",
+          "Deep Sleep"
+        ],
+        "wakeup_sources": [
+          "GPIO",
+          "Timer",
+          "Touch",
+          "ULP"
+        ]
       },
       "package": {
-        "package_types": ["QFN56"],
-        "dimensions_mm": ["7x7"],
+        "package_types": [
+          "QFN56"
+        ],
+        "dimensions_mm": [
+          "7x7"
+        ],
         "pin_count": 56,
         "operating_temp_min_c": -40,
         "operating_temp_max_c": 85
       },
       "software_ecosystem": {
         "primary_sdk": "ESP-IDF",
-        "rtos_support": ["FreeRTOS"],
+        "rtos_support": [
+          "FreeRTOS"
+        ],
         "arduino_support": true,
         "micropython_support": true,
         "circuitpython_support": true,
@@ -423,7 +573,11 @@
         "matter_sdk": false,
         "homekit_support": false,
         "ai_ml_frameworks": [],
-        "cloud_integrations": ["AWS IoT", "Azure IoT", "Google Cloud IoT"],
+        "cloud_integrations": [
+          "AWS IoT",
+          "Azure IoT",
+          "Google Cloud IoT"
+        ],
         "community_size": "medium"
       },
       "pricing": {
@@ -433,8 +587,13 @@
         "pricing_notes": null
       },
       "metadata": {
-        "source_urls": ["https://www.espressif.com/en/products/socs/esp32-s2", "https://github.com/artkeller/ESP32Features"],
-        "datasheet_urls": ["https://www.espressif.com/sites/default/files/documentation/esp32-s2_datasheet_en.pdf"],
+        "source_urls": [
+          "https://www.espressif.com/en/products/socs/esp32-s2",
+          "https://github.com/artkeller/ESP32Features"
+        ],
+        "datasheet_urls": [
+          "https://www.espressif.com/sites/default/files/documentation/esp32-s2_datasheet_en.pdf"
+        ],
         "last_updated": "2026-03-07",
         "notes": "WiFi-only variant with USB OTG, good for HMI applications",
         "confidence": "high"
@@ -445,12 +604,25 @@
       "chip_model": "ESP32-S3",
       "status": "active",
       "release_year": 2021,
-      "target_applications": ["AIoT", "Smart Home", "HMI", "Audio", "Camera", "Wearables"],
+      "target_applications": [
+        "AIoT",
+        "Smart Home",
+        "HMI",
+        "Audio",
+        "Camera",
+        "Wearables"
+      ],
       "connectivity": {
         "wifi": {
           "supported": true,
-          "standards": ["802.11b", "802.11g", "802.11n"],
-          "bands": ["2.4GHz"],
+          "standards": [
+            "802.11b",
+            "802.11g",
+            "802.11n"
+          ],
+          "bands": [
+            "2.4GHz"
+          ],
           "mimo": "1T1R",
           "max_data_rate_mbps": 150,
           "wifi_generation": "WiFi 4",
@@ -472,7 +644,10 @@
         "cellular": null,
         "ethernet": false,
         "matter_support": true,
-        "other_protocols": ["ESP-NOW", "ESP-MESH"]
+        "other_protocols": [
+          "ESP-NOW",
+          "ESP-MESH"
+        ]
       },
       "processing": {
         "cpu_architecture": "Xtensa LX7",
@@ -509,15 +684,32 @@
         "i2c": 2,
         "i2s": 2,
         "i3c": false,
-        "usb": { "supported": true, "type": "USB 1.1 OTG Full-Speed + USB Serial/JTAG", "host": true, "device": true },
+        "usb": {
+          "supported": true,
+          "type": "USB 1.1 OTG Full-Speed + USB Serial/JTAG",
+          "host": true,
+          "device": true
+        },
         "sdio": true,
         "sd_mmc": true,
         "can_twai": true,
         "ethernet_mac": false,
         "camera_interface": true,
-        "lcd_interface": { "supported": true, "types": ["SPI LCD", "8080", "RGB565", "RGB888"] },
+        "lcd_interface": {
+          "supported": true,
+          "types": [
+            "SPI LCD",
+            "8080",
+            "RGB565",
+            "RGB888"
+          ]
+        },
         "touch_sensor_channels": 14,
-        "adc": { "channels": 20, "resolution_bits": 12, "sample_rate_ksps": null },
+        "adc": {
+          "channels": 20,
+          "resolution_bits": 12,
+          "sample_rate_ksps": null
+        },
         "dac": null,
         "pwm_channels": 8,
         "motor_pwm": true,
@@ -529,13 +721,21 @@
         "timer_groups": 2,
         "watchdog_timers": 4,
         "temperature_sensor": true,
-        "other": ["World Controller (dual execution environments)"]
+        "other": [
+          "World Controller (dual execution environments)"
+        ]
       },
       "security": {
         "secure_boot": true,
         "flash_encryption": true,
         "crypto_accelerator": true,
-        "crypto_algorithms": ["AES-XTS", "SHA", "RSA", "ECC", "HMAC"],
+        "crypto_algorithms": [
+          "AES-XTS",
+          "SHA",
+          "RSA",
+          "ECC",
+          "HMAC"
+        ],
         "tee": false,
         "arm_trustzone": false,
         "psa_certified": false,
@@ -548,7 +748,7 @@
         "secure_debug": false
       },
       "power_management": {
-        "supply_voltage_min_v": 3.0,
+        "supply_voltage_min_v": 3,
         "supply_voltage_max_v": 3.6,
         "dc_dc_converter": false,
         "active_mode_ma": 24,
@@ -557,38 +757,68 @@
         "deep_sleep_ua": 7,
         "hibernate_ua": null,
         "shutdown_ua": null,
-        "power_modes": ["Active", "Modem Sleep", "Light Sleep", "Deep Sleep"],
-        "wakeup_sources": ["GPIO", "Timer", "Touch", "ULP"]
+        "power_modes": [
+          "Active",
+          "Modem Sleep",
+          "Light Sleep",
+          "Deep Sleep"
+        ],
+        "wakeup_sources": [
+          "GPIO",
+          "Timer",
+          "Touch",
+          "ULP"
+        ]
       },
       "package": {
-        "package_types": ["QFN56"],
-        "dimensions_mm": ["7x7"],
+        "package_types": [
+          "QFN56"
+        ],
+        "dimensions_mm": [
+          "7x7"
+        ],
         "pin_count": 56,
         "operating_temp_min_c": -40,
         "operating_temp_max_c": 85
       },
       "software_ecosystem": {
         "primary_sdk": "ESP-IDF",
-        "rtos_support": ["FreeRTOS"],
+        "rtos_support": [
+          "FreeRTOS"
+        ],
         "arduino_support": true,
         "micropython_support": true,
         "circuitpython_support": true,
         "zephyr_support": true,
         "matter_sdk": true,
         "homekit_support": true,
-        "ai_ml_frameworks": ["TensorFlow Lite Micro", "ESP-DL", "ESP-NN"],
-        "cloud_integrations": ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Alibaba Cloud"],
+        "ai_ml_frameworks": [
+          "TensorFlow Lite Micro",
+          "ESP-DL",
+          "ESP-NN"
+        ],
+        "cloud_integrations": [
+          "AWS IoT",
+          "Azure IoT",
+          "Google Cloud IoT",
+          "Alibaba Cloud"
+        ],
         "community_size": "large"
       },
       "pricing": {
-        "typical_1ku_usd": 2.20,
+        "typical_1ku_usd": 2.2,
         "typical_10ku_usd": null,
-        "digikey_unit_usd": 3.50,
+        "digikey_unit_usd": 3.5,
         "pricing_notes": null
       },
       "metadata": {
-        "source_urls": ["https://www.espressif.com/en/products/socs/esp32-s3", "https://github.com/artkeller/ESP32Features"],
-        "datasheet_urls": ["https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"],
+        "source_urls": [
+          "https://www.espressif.com/en/products/socs/esp32-s3",
+          "https://github.com/artkeller/ESP32Features"
+        ],
+        "datasheet_urls": [
+          "https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf"
+        ],
         "last_updated": "2026-03-07",
         "notes": "Most popular current ESP32 variant. AI vector extensions, camera+LCD, USB OTG",
         "confidence": "high"
@@ -599,12 +829,23 @@
       "chip_model": "ESP32-C2",
       "status": "active",
       "release_year": 2022,
-      "target_applications": ["Smart Home", "Low-cost IoT", "Smart Lighting", "Connected Switches"],
+      "target_applications": [
+        "Smart Home",
+        "Low-cost IoT",
+        "Smart Lighting",
+        "Connected Switches"
+      ],
       "connectivity": {
         "wifi": {
           "supported": true,
-          "standards": ["802.11b", "802.11g", "802.11n"],
-          "bands": ["2.4GHz"],
+          "standards": [
+            "802.11b",
+            "802.11g",
+            "802.11n"
+          ],
+          "bands": [
+            "2.4GHz"
+          ],
           "mimo": "1T1R",
           "max_data_rate_mbps": 72.2,
           "wifi_generation": "WiFi 4",
@@ -626,7 +867,9 @@
         "cellular": null,
         "ethernet": false,
         "matter_support": true,
-        "other_protocols": ["ESP-NOW"]
+        "other_protocols": [
+          "ESP-NOW"
+        ]
       },
       "processing": {
         "cpu_architecture": "RISC-V (single-core)",
@@ -667,7 +910,11 @@
         "camera_interface": false,
         "lcd_interface": null,
         "touch_sensor_channels": 0,
-        "adc": { "channels": 6, "resolution_bits": 12, "sample_rate_ksps": null },
+        "adc": {
+          "channels": 6,
+          "resolution_bits": 12,
+          "sample_rate_ksps": null
+        },
         "dac": null,
         "pwm_channels": 6,
         "motor_pwm": false,
@@ -685,7 +932,10 @@
         "secure_boot": true,
         "flash_encryption": true,
         "crypto_accelerator": true,
-        "crypto_algorithms": ["AES", "SHA"],
+        "crypto_algorithms": [
+          "AES",
+          "SHA"
+        ],
         "tee": false,
         "arm_trustzone": false,
         "psa_certified": false,
@@ -698,7 +948,7 @@
         "secure_debug": false
       },
       "power_management": {
-        "supply_voltage_min_v": 3.0,
+        "supply_voltage_min_v": 3,
         "supply_voltage_max_v": 3.6,
         "dc_dc_converter": false,
         "active_mode_ma": null,
@@ -707,19 +957,35 @@
         "deep_sleep_ua": 5,
         "hibernate_ua": null,
         "shutdown_ua": null,
-        "power_modes": ["Active", "Modem Sleep", "Light Sleep", "Deep Sleep"],
-        "wakeup_sources": ["GPIO", "Timer"]
+        "power_modes": [
+          "Active",
+          "Modem Sleep",
+          "Light Sleep",
+          "Deep Sleep"
+        ],
+        "wakeup_sources": [
+          "GPIO",
+          "Timer"
+        ]
       },
       "package": {
-        "package_types": ["QFN20", "QFN24"],
-        "dimensions_mm": ["4x4", "4x4"],
+        "package_types": [
+          "QFN20",
+          "QFN24"
+        ],
+        "dimensions_mm": [
+          "4x4",
+          "4x4"
+        ],
         "pin_count": 20,
         "operating_temp_min_c": -40,
         "operating_temp_max_c": 85
       },
       "software_ecosystem": {
         "primary_sdk": "ESP-IDF",
-        "rtos_support": ["FreeRTOS"],
+        "rtos_support": [
+          "FreeRTOS"
+        ],
         "arduino_support": true,
         "micropython_support": false,
         "circuitpython_support": false,
@@ -727,18 +993,26 @@
         "matter_sdk": true,
         "homekit_support": false,
         "ai_ml_frameworks": [],
-        "cloud_integrations": ["AWS IoT", "Azure IoT"],
+        "cloud_integrations": [
+          "AWS IoT",
+          "Azure IoT"
+        ],
         "community_size": "medium"
       },
       "pricing": {
-        "typical_1ku_usd": 0.70,
+        "typical_1ku_usd": 0.7,
         "typical_10ku_usd": null,
         "digikey_unit_usd": null,
         "pricing_notes": "Ultra low-cost, ESP8266 replacement"
       },
       "metadata": {
-        "source_urls": ["https://www.espressif.com/en/products/socs/esp32-c2", "https://github.com/artkeller/ESP32Features"],
-        "datasheet_urls": ["https://www.espressif.com/sites/default/files/documentation/esp8684_datasheet_en.pdf"],
+        "source_urls": [
+          "https://www.espressif.com/en/products/socs/esp32-c2",
+          "https://github.com/artkeller/ESP32Features"
+        ],
+        "datasheet_urls": [
+          "https://www.espressif.com/sites/default/files/documentation/esp8684_datasheet_en.pdf"
+        ],
         "last_updated": "2026-03-07",
         "notes": "Also known as ESP8684. Cost-optimized RISC-V for high-volume IoT",
         "confidence": "high"
@@ -749,12 +1023,23 @@
       "chip_model": "ESP32-C3",
       "status": "active",
       "release_year": 2021,
-      "target_applications": ["Smart Home", "IoT Sensors", "Smart Lighting", "Industrial"],
+      "target_applications": [
+        "Smart Home",
+        "IoT Sensors",
+        "Smart Lighting",
+        "Industrial"
+      ],
       "connectivity": {
         "wifi": {
           "supported": true,
-          "standards": ["802.11b", "802.11g", "802.11n"],
-          "bands": ["2.4GHz"],
+          "standards": [
+            "802.11b",
+            "802.11g",
+            "802.11n"
+          ],
+          "bands": [
+            "2.4GHz"
+          ],
           "mimo": "1T1R",
           "max_data_rate_mbps": 150,
           "wifi_generation": "WiFi 4",
@@ -776,7 +1061,9 @@
         "cellular": null,
         "ethernet": false,
         "matter_support": true,
-        "other_protocols": ["ESP-NOW"]
+        "other_protocols": [
+          "ESP-NOW"
+        ]
       },
       "processing": {
         "cpu_architecture": "RISC-V (single-core)",
@@ -809,7 +1096,12 @@
         "i2c": 1,
         "i2s": 1,
         "i3c": false,
-        "usb": { "supported": true, "type": "USB Serial/JTAG", "host": false, "device": true },
+        "usb": {
+          "supported": true,
+          "type": "USB Serial/JTAG",
+          "host": false,
+          "device": true
+        },
         "sdio": false,
         "sd_mmc": false,
         "can_twai": true,
@@ -817,7 +1109,11 @@
         "camera_interface": false,
         "lcd_interface": null,
         "touch_sensor_channels": 0,
-        "adc": { "channels": 6, "resolution_bits": 12, "sample_rate_ksps": null },
+        "adc": {
+          "channels": 6,
+          "resolution_bits": 12,
+          "sample_rate_ksps": null
+        },
         "dac": null,
         "pwm_channels": 6,
         "motor_pwm": false,
@@ -835,7 +1131,12 @@
         "secure_boot": true,
         "flash_encryption": true,
         "crypto_accelerator": true,
-        "crypto_algorithms": ["AES-XTS", "SHA", "RSA", "HMAC"],
+        "crypto_algorithms": [
+          "AES-XTS",
+          "SHA",
+          "RSA",
+          "HMAC"
+        ],
         "tee": false,
         "arm_trustzone": false,
         "psa_certified": false,
@@ -848,7 +1149,7 @@
         "secure_debug": false
       },
       "power_management": {
-        "supply_voltage_min_v": 3.0,
+        "supply_voltage_min_v": 3,
         "supply_voltage_max_v": 3.6,
         "dc_dc_converter": false,
         "active_mode_ma": null,
@@ -857,19 +1158,33 @@
         "deep_sleep_ua": 5,
         "hibernate_ua": null,
         "shutdown_ua": null,
-        "power_modes": ["Active", "Modem Sleep", "Light Sleep", "Deep Sleep"],
-        "wakeup_sources": ["GPIO", "Timer"]
+        "power_modes": [
+          "Active",
+          "Modem Sleep",
+          "Light Sleep",
+          "Deep Sleep"
+        ],
+        "wakeup_sources": [
+          "GPIO",
+          "Timer"
+        ]
       },
       "package": {
-        "package_types": ["QFN32"],
-        "dimensions_mm": ["5x5"],
+        "package_types": [
+          "QFN32"
+        ],
+        "dimensions_mm": [
+          "5x5"
+        ],
         "pin_count": 32,
         "operating_temp_min_c": -40,
         "operating_temp_max_c": 85
       },
       "software_ecosystem": {
         "primary_sdk": "ESP-IDF",
-        "rtos_support": ["FreeRTOS"],
+        "rtos_support": [
+          "FreeRTOS"
+        ],
         "arduino_support": true,
         "micropython_support": true,
         "circuitpython_support": true,
@@ -877,18 +1192,27 @@
         "matter_sdk": true,
         "homekit_support": false,
         "ai_ml_frameworks": [],
-        "cloud_integrations": ["AWS IoT", "Azure IoT", "Google Cloud IoT"],
+        "cloud_integrations": [
+          "AWS IoT",
+          "Azure IoT",
+          "Google Cloud IoT"
+        ],
         "community_size": "large"
       },
       "pricing": {
-        "typical_1ku_usd": 1.00,
+        "typical_1ku_usd": 1,
         "typical_10ku_usd": null,
-        "digikey_unit_usd": 1.90,
+        "digikey_unit_usd": 1.9,
         "pricing_notes": null
       },
       "metadata": {
-        "source_urls": ["https://www.espressif.com/en/products/socs/esp32-c3", "https://github.com/artkeller/ESP32Features"],
-        "datasheet_urls": ["https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf"],
+        "source_urls": [
+          "https://www.espressif.com/en/products/socs/esp32-c3",
+          "https://github.com/artkeller/ESP32Features"
+        ],
+        "datasheet_urls": [
+          "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf"
+        ],
         "last_updated": "2026-03-07",
         "notes": "First Espressif RISC-V chip. Popular ESP32 alternative for cost-sensitive applications",
         "confidence": "high"
@@ -899,12 +1223,27 @@
       "chip_model": "ESP32-C5",
       "status": "active",
       "release_year": 2024,
-      "target_applications": ["Smart Home", "Industrial IoT", "Mesh Networks", "Matter Devices"],
+      "target_applications": [
+        "Smart Home",
+        "Industrial IoT",
+        "Mesh Networks",
+        "Matter Devices"
+      ],
       "connectivity": {
         "wifi": {
           "supported": true,
-          "standards": ["802.11a", "802.11b", "802.11g", "802.11n", "802.11ac", "802.11ax"],
-          "bands": ["2.4GHz", "5GHz"],
+          "standards": [
+            "802.11a",
+            "802.11b",
+            "802.11g",
+            "802.11n",
+            "802.11ac",
+            "802.11ax"
+          ],
+          "bands": [
+            "2.4GHz",
+            "5GHz"
+          ],
           "mimo": "1T1R",
           "max_data_rate_mbps": null,
           "wifi_generation": "WiFi 6",
@@ -931,7 +1270,9 @@
         "cellular": null,
         "ethernet": false,
         "matter_support": true,
-        "other_protocols": ["ESP-NOW"]
+        "other_protocols": [
+          "ESP-NOW"
+        ]
       },
       "processing": {
         "cpu_architecture": "RISC-V (HP + LP cores)",
@@ -968,7 +1309,12 @@
         "i2c": 2,
         "i2s": 1,
         "i3c": false,
-        "usb": { "supported": true, "type": "USB Serial/JTAG", "host": false, "device": true },
+        "usb": {
+          "supported": true,
+          "type": "USB Serial/JTAG",
+          "host": false,
+          "device": true
+        },
         "sdio": true,
         "sd_mmc": false,
         "can_twai": true,
@@ -976,7 +1322,11 @@
         "camera_interface": false,
         "lcd_interface": null,
         "touch_sensor_channels": 0,
-        "adc": { "channels": 6, "resolution_bits": 12, "sample_rate_ksps": null },
+        "adc": {
+          "channels": 6,
+          "resolution_bits": 12,
+          "sample_rate_ksps": null
+        },
         "dac": null,
         "pwm_channels": 6,
         "motor_pwm": true,
@@ -988,13 +1338,22 @@
         "timer_groups": null,
         "watchdog_timers": null,
         "temperature_sensor": true,
-        "other": ["2x CAN FD", "PARLIO"]
+        "other": [
+          "2x CAN FD",
+          "PARLIO"
+        ]
       },
       "security": {
         "secure_boot": true,
         "flash_encryption": true,
         "crypto_accelerator": true,
-        "crypto_algorithms": ["AES", "SHA", "RSA", "ECC", "HMAC"],
+        "crypto_algorithms": [
+          "AES",
+          "SHA",
+          "RSA",
+          "ECC",
+          "HMAC"
+        ],
         "tee": true,
         "arm_trustzone": false,
         "psa_certified": false,
@@ -1007,7 +1366,7 @@
         "secure_debug": false
       },
       "power_management": {
-        "supply_voltage_min_v": 3.0,
+        "supply_voltage_min_v": 3,
         "supply_voltage_max_v": 3.6,
         "dc_dc_converter": false,
         "active_mode_ma": null,
@@ -1016,19 +1375,33 @@
         "deep_sleep_ua": null,
         "hibernate_ua": null,
         "shutdown_ua": null,
-        "power_modes": ["Active", "Modem Sleep", "Light Sleep", "Deep Sleep"],
-        "wakeup_sources": ["GPIO", "Timer"]
+        "power_modes": [
+          "Active",
+          "Modem Sleep",
+          "Light Sleep",
+          "Deep Sleep"
+        ],
+        "wakeup_sources": [
+          "GPIO",
+          "Timer"
+        ]
       },
       "package": {
-        "package_types": ["QFN40"],
-        "dimensions_mm": ["5x5"],
+        "package_types": [
+          "QFN40"
+        ],
+        "dimensions_mm": [
+          "5x5"
+        ],
         "pin_count": 40,
         "operating_temp_min_c": -40,
         "operating_temp_max_c": 85
       },
       "software_ecosystem": {
         "primary_sdk": "ESP-IDF",
-        "rtos_support": ["FreeRTOS"],
+        "rtos_support": [
+          "FreeRTOS"
+        ],
         "arduino_support": true,
         "micropython_support": false,
         "circuitpython_support": false,
@@ -1036,7 +1409,10 @@
         "matter_sdk": true,
         "homekit_support": false,
         "ai_ml_frameworks": [],
-        "cloud_integrations": ["AWS IoT", "Azure IoT"],
+        "cloud_integrations": [
+          "AWS IoT",
+          "Azure IoT"
+        ],
         "community_size": "small"
       },
       "pricing": {
@@ -1046,8 +1422,13 @@
         "pricing_notes": "Newly released"
       },
       "metadata": {
-        "source_urls": ["https://www.espressif.com/en/products/socs/esp32-c5", "https://github.com/artkeller/ESP32Features"],
-        "datasheet_urls": ["https://www.espressif.com/sites/default/files/documentation/esp32-c5_datasheet_en.pdf"],
+        "source_urls": [
+          "https://www.espressif.com/en/products/socs/esp32-c5",
+          "https://github.com/artkeller/ESP32Features"
+        ],
+        "datasheet_urls": [
+          "https://www.espressif.com/sites/default/files/documentation/esp32-c5_datasheet_en.pdf"
+        ],
         "last_updated": "2026-03-07",
         "notes": "First Espressif dual-band WiFi 6 + 802.15.4 tri-protocol SoC. Key differentiation vs competitors.",
         "confidence": "high"
@@ -1058,12 +1439,25 @@
       "chip_model": "ESP32-C6",
       "status": "active",
       "release_year": 2023,
-      "target_applications": ["Smart Home", "Matter Devices", "Thread Border Router", "Zigbee", "Industrial IoT"],
+      "target_applications": [
+        "Smart Home",
+        "Matter Devices",
+        "Thread Border Router",
+        "Zigbee",
+        "Industrial IoT"
+      ],
       "connectivity": {
         "wifi": {
           "supported": true,
-          "standards": ["802.11b", "802.11g", "802.11n", "802.11ax"],
-          "bands": ["2.4GHz"],
+          "standards": [
+            "802.11b",
+            "802.11g",
+            "802.11n",
+            "802.11ax"
+          ],
+          "bands": [
+            "2.4GHz"
+          ],
           "mimo": "1T1R",
           "max_data_rate_mbps": null,
           "wifi_generation": "WiFi 6",
@@ -1090,7 +1484,9 @@
         "cellular": null,
         "ethernet": false,
         "matter_support": true,
-        "other_protocols": ["ESP-NOW"]
+        "other_protocols": [
+          "ESP-NOW"
+        ]
       },
       "processing": {
         "cpu_architecture": "RISC-V (HP + LP cores)",
@@ -1127,7 +1523,12 @@
         "i2c": 2,
         "i2s": 1,
         "i3c": false,
-        "usb": { "supported": true, "type": "USB Serial/JTAG", "host": false, "device": true },
+        "usb": {
+          "supported": true,
+          "type": "USB Serial/JTAG",
+          "host": false,
+          "device": true
+        },
         "sdio": true,
         "sd_mmc": false,
         "can_twai": true,
@@ -1135,7 +1536,11 @@
         "camera_interface": false,
         "lcd_interface": null,
         "touch_sensor_channels": 0,
-        "adc": { "channels": 7, "resolution_bits": 12, "sample_rate_ksps": null },
+        "adc": {
+          "channels": 7,
+          "resolution_bits": 12,
+          "sample_rate_ksps": null
+        },
         "dac": null,
         "pwm_channels": 6,
         "motor_pwm": true,
@@ -1147,13 +1552,23 @@
         "timer_groups": null,
         "watchdog_timers": null,
         "temperature_sensor": true,
-        "other": ["PARLIO", "LP UART", "LP I2C"]
+        "other": [
+          "PARLIO",
+          "LP UART",
+          "LP I2C"
+        ]
       },
       "security": {
         "secure_boot": true,
         "flash_encryption": true,
         "crypto_accelerator": true,
-        "crypto_algorithms": ["AES-XTS", "SHA", "RSA-3072", "ECC", "HMAC"],
+        "crypto_algorithms": [
+          "AES-XTS",
+          "SHA",
+          "RSA-3072",
+          "ECC",
+          "HMAC"
+        ],
         "tee": true,
         "arm_trustzone": false,
         "psa_certified": false,
@@ -1166,7 +1581,7 @@
         "secure_debug": false
       },
       "power_management": {
-        "supply_voltage_min_v": 3.0,
+        "supply_voltage_min_v": 3,
         "supply_voltage_max_v": 3.6,
         "dc_dc_converter": false,
         "active_mode_ma": null,
@@ -1175,19 +1590,35 @@
         "deep_sleep_ua": 7,
         "hibernate_ua": null,
         "shutdown_ua": null,
-        "power_modes": ["Active", "Modem Sleep", "Light Sleep", "Deep Sleep"],
-        "wakeup_sources": ["GPIO", "Timer", "LP Core"]
+        "power_modes": [
+          "Active",
+          "Modem Sleep",
+          "Light Sleep",
+          "Deep Sleep"
+        ],
+        "wakeup_sources": [
+          "GPIO",
+          "Timer",
+          "LP Core"
+        ]
       },
       "package": {
-        "package_types": ["QFN40", "QFN32"],
-        "dimensions_mm": ["5x5"],
+        "package_types": [
+          "QFN40",
+          "QFN32"
+        ],
+        "dimensions_mm": [
+          "5x5"
+        ],
         "pin_count": 40,
         "operating_temp_min_c": -40,
         "operating_temp_max_c": 85
       },
       "software_ecosystem": {
         "primary_sdk": "ESP-IDF",
-        "rtos_support": ["FreeRTOS"],
+        "rtos_support": [
+          "FreeRTOS"
+        ],
         "arduino_support": true,
         "micropython_support": true,
         "circuitpython_support": false,
@@ -1195,18 +1626,27 @@
         "matter_sdk": true,
         "homekit_support": false,
         "ai_ml_frameworks": [],
-        "cloud_integrations": ["AWS IoT", "Azure IoT", "Google Cloud IoT"],
+        "cloud_integrations": [
+          "AWS IoT",
+          "Azure IoT",
+          "Google Cloud IoT"
+        ],
         "community_size": "large"
       },
       "pricing": {
-        "typical_1ku_usd": 1.20,
+        "typical_1ku_usd": 1.2,
         "typical_10ku_usd": null,
-        "digikey_unit_usd": 2.50,
+        "digikey_unit_usd": 2.5,
         "pricing_notes": null
       },
       "metadata": {
-        "source_urls": ["https://www.espressif.com/en/products/socs/esp32-c6", "https://github.com/artkeller/ESP32Features"],
-        "datasheet_urls": ["https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf"],
+        "source_urls": [
+          "https://www.espressif.com/en/products/socs/esp32-c6",
+          "https://github.com/artkeller/ESP32Features"
+        ],
+        "datasheet_urls": [
+          "https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf"
+        ],
         "last_updated": "2026-03-07",
         "notes": "First ESP with WiFi 6 + BLE 5.3 + 802.15.4 tri-radio. Key Matter/Thread enabler.",
         "confidence": "high"
@@ -1217,12 +1657,23 @@
       "chip_model": "ESP32-C61",
       "status": "active",
       "release_year": 2024,
-      "target_applications": ["Smart Home", "Low-cost WiFi 6", "IoT Sensors"],
+      "target_applications": [
+        "Smart Home",
+        "Low-cost WiFi 6",
+        "IoT Sensors"
+      ],
       "connectivity": {
         "wifi": {
           "supported": true,
-          "standards": ["802.11b", "802.11g", "802.11n", "802.11ax"],
-          "bands": ["2.4GHz"],
+          "standards": [
+            "802.11b",
+            "802.11g",
+            "802.11n",
+            "802.11ax"
+          ],
+          "bands": [
+            "2.4GHz"
+          ],
           "mimo": "1T1R",
           "max_data_rate_mbps": null,
           "wifi_generation": "WiFi 6",
@@ -1238,13 +1689,20 @@
           "direction_finding": false,
           "long_range": false
         },
-        "ieee802154": null,
+        "ieee802154": {
+          "supported": true,
+          "thread": true,
+          "zigbee": true,
+          "matter_over_thread": true
+        },
         "lora": false,
         "sub_ghz": null,
         "cellular": null,
         "ethernet": false,
         "matter_support": true,
-        "other_protocols": ["ESP-NOW"]
+        "other_protocols": [
+          "ESP-NOW"
+        ]
       },
       "processing": {
         "cpu_architecture": "RISC-V (single-core)",
@@ -1277,7 +1735,12 @@
         "i2c": 1,
         "i2s": 1,
         "i3c": false,
-        "usb": { "supported": true, "type": "USB Serial/JTAG", "host": false, "device": true },
+        "usb": {
+          "supported": true,
+          "type": "USB Serial/JTAG",
+          "host": false,
+          "device": true
+        },
         "sdio": true,
         "sd_mmc": false,
         "can_twai": true,
@@ -1285,7 +1748,11 @@
         "camera_interface": false,
         "lcd_interface": null,
         "touch_sensor_channels": 0,
-        "adc": { "channels": 1, "resolution_bits": 12, "sample_rate_ksps": null },
+        "adc": {
+          "channels": 1,
+          "resolution_bits": 12,
+          "sample_rate_ksps": null
+        },
         "dac": null,
         "pwm_channels": 6,
         "motor_pwm": false,
@@ -1303,7 +1770,11 @@
         "secure_boot": true,
         "flash_encryption": true,
         "crypto_accelerator": true,
-        "crypto_algorithms": ["AES", "SHA", "HMAC"],
+        "crypto_algorithms": [
+          "AES",
+          "SHA",
+          "HMAC"
+        ],
         "tee": false,
         "arm_trustzone": false,
         "psa_certified": false,
@@ -1316,7 +1787,7 @@
         "secure_debug": false
       },
       "power_management": {
-        "supply_voltage_min_v": 3.0,
+        "supply_voltage_min_v": 3,
         "supply_voltage_max_v": 3.6,
         "dc_dc_converter": false,
         "active_mode_ma": null,
@@ -1325,19 +1796,33 @@
         "deep_sleep_ua": null,
         "hibernate_ua": null,
         "shutdown_ua": null,
-        "power_modes": ["Active", "Modem Sleep", "Light Sleep", "Deep Sleep"],
-        "wakeup_sources": ["GPIO", "Timer"]
+        "power_modes": [
+          "Active",
+          "Modem Sleep",
+          "Light Sleep",
+          "Deep Sleep"
+        ],
+        "wakeup_sources": [
+          "GPIO",
+          "Timer"
+        ]
       },
       "package": {
-        "package_types": ["QFN32"],
-        "dimensions_mm": ["4x4"],
+        "package_types": [
+          "QFN32"
+        ],
+        "dimensions_mm": [
+          "4x4"
+        ],
         "pin_count": 32,
         "operating_temp_min_c": -40,
         "operating_temp_max_c": 85
       },
       "software_ecosystem": {
         "primary_sdk": "ESP-IDF",
-        "rtos_support": ["FreeRTOS"],
+        "rtos_support": [
+          "FreeRTOS"
+        ],
         "arduino_support": true,
         "micropython_support": false,
         "circuitpython_support": false,
@@ -1345,7 +1830,9 @@
         "matter_sdk": true,
         "homekit_support": false,
         "ai_ml_frameworks": [],
-        "cloud_integrations": ["AWS IoT"],
+        "cloud_integrations": [
+          "AWS IoT"
+        ],
         "community_size": "small"
       },
       "pricing": {
@@ -1355,7 +1842,10 @@
         "pricing_notes": "Cost-reduced WiFi 6 variant"
       },
       "metadata": {
-        "source_urls": ["https://www.espressif.com/en/products/socs/esp32-c61", "https://github.com/artkeller/ESP32Features"],
+        "source_urls": [
+          "https://www.espressif.com/en/products/socs/esp32-c61",
+          "https://github.com/artkeller/ESP32Features"
+        ],
         "datasheet_urls": [],
         "last_updated": "2026-03-07",
         "notes": "Cost-optimized WiFi 6 + BLE variant. Reduced peripheral set vs C6.",
@@ -1367,7 +1857,13 @@
       "chip_model": "ESP32-H2",
       "status": "active",
       "release_year": 2023,
-      "target_applications": ["Smart Home", "Thread/Zigbee Mesh", "Matter Devices", "Sensors", "Smart Lighting"],
+      "target_applications": [
+        "Smart Home",
+        "Thread/Zigbee Mesh",
+        "Matter Devices",
+        "Sensors",
+        "Smart Lighting"
+      ],
       "connectivity": {
         "wifi": null,
         "bluetooth": {
@@ -1423,7 +1919,12 @@
         "i2c": 2,
         "i2s": 1,
         "i3c": false,
-        "usb": { "supported": true, "type": "USB Serial/JTAG", "host": false, "device": true },
+        "usb": {
+          "supported": true,
+          "type": "USB Serial/JTAG",
+          "host": false,
+          "device": true
+        },
         "sdio": false,
         "sd_mmc": false,
         "can_twai": true,
@@ -1431,7 +1932,11 @@
         "camera_interface": false,
         "lcd_interface": null,
         "touch_sensor_channels": 0,
-        "adc": { "channels": 5, "resolution_bits": 12, "sample_rate_ksps": null },
+        "adc": {
+          "channels": 5,
+          "resolution_bits": 12,
+          "sample_rate_ksps": null
+        },
         "dac": null,
         "pwm_channels": 6,
         "motor_pwm": true,
@@ -1443,13 +1948,22 @@
         "timer_groups": null,
         "watchdog_timers": null,
         "temperature_sensor": true,
-        "other": ["Event Task Matrix"]
+        "other": [
+          "Event Task Matrix"
+        ]
       },
       "security": {
         "secure_boot": true,
         "flash_encryption": true,
         "crypto_accelerator": true,
-        "crypto_algorithms": ["AES-XTS", "SHA", "RSA", "ECC", "ECDSA", "HMAC"],
+        "crypto_algorithms": [
+          "AES-XTS",
+          "SHA",
+          "RSA",
+          "ECC",
+          "ECDSA",
+          "HMAC"
+        ],
         "tee": false,
         "arm_trustzone": false,
         "psa_certified": false,
@@ -1462,7 +1976,7 @@
         "secure_debug": false
       },
       "power_management": {
-        "supply_voltage_min_v": 3.0,
+        "supply_voltage_min_v": 3,
         "supply_voltage_max_v": 3.6,
         "dc_dc_converter": false,
         "active_mode_ma": null,
@@ -1471,19 +1985,33 @@
         "deep_sleep_ua": 7,
         "hibernate_ua": null,
         "shutdown_ua": null,
-        "power_modes": ["Active", "Modem Sleep", "Light Sleep", "Deep Sleep"],
-        "wakeup_sources": ["GPIO", "Timer"]
+        "power_modes": [
+          "Active",
+          "Modem Sleep",
+          "Light Sleep",
+          "Deep Sleep"
+        ],
+        "wakeup_sources": [
+          "GPIO",
+          "Timer"
+        ]
       },
       "package": {
-        "package_types": ["QFN32"],
-        "dimensions_mm": ["4x4"],
+        "package_types": [
+          "QFN32"
+        ],
+        "dimensions_mm": [
+          "4x4"
+        ],
         "pin_count": 32,
         "operating_temp_min_c": -40,
         "operating_temp_max_c": 85
       },
       "software_ecosystem": {
         "primary_sdk": "ESP-IDF",
-        "rtos_support": ["FreeRTOS"],
+        "rtos_support": [
+          "FreeRTOS"
+        ],
         "arduino_support": true,
         "micropython_support": false,
         "circuitpython_support": false,
@@ -1495,14 +2023,19 @@
         "community_size": "medium"
       },
       "pricing": {
-        "typical_1ku_usd": 0.90,
+        "typical_1ku_usd": 0.9,
         "typical_10ku_usd": null,
         "digikey_unit_usd": null,
         "pricing_notes": null
       },
       "metadata": {
-        "source_urls": ["https://www.espressif.com/en/products/socs/esp32-h2", "https://github.com/artkeller/ESP32Features"],
-        "datasheet_urls": ["https://cdn-shop.adafruit.com/product-files/5715/esp32-h2_datasheet_en.pdf"],
+        "source_urls": [
+          "https://www.espressif.com/en/products/socs/esp32-h2",
+          "https://github.com/artkeller/ESP32Features"
+        ],
+        "datasheet_urls": [
+          "https://cdn-shop.adafruit.com/product-files/5715/esp32-h2_datasheet_en.pdf"
+        ],
         "last_updated": "2026-03-07",
         "notes": "No WiFi. Dedicated Thread/Zigbee/BLE mesh node. Low cost for Matter endpoints.",
         "confidence": "high"
@@ -1513,7 +2046,13 @@
       "chip_model": "ESP32-H4",
       "status": "active",
       "release_year": 2025,
-      "target_applications": ["Smart Home", "Wireless Audio", "Sensors", "Matter", "Thread/Zigbee"],
+      "target_applications": [
+        "Smart Home",
+        "Wireless Audio",
+        "Sensors",
+        "Matter",
+        "Thread/Zigbee"
+      ],
       "connectivity": {
         "wifi": null,
         "bluetooth": {
@@ -1573,7 +2112,12 @@
         "i2c": null,
         "i2s": null,
         "i3c": false,
-        "usb": { "supported": true, "type": "USB OTG", "host": true, "device": true },
+        "usb": {
+          "supported": true,
+          "type": "USB OTG",
+          "host": true,
+          "device": true
+        },
         "sdio": false,
         "sd_mmc": false,
         "can_twai": true,
@@ -1581,7 +2125,11 @@
         "camera_interface": false,
         "lcd_interface": null,
         "touch_sensor_channels": 14,
-        "adc": { "channels": null, "resolution_bits": 12, "sample_rate_ksps": null },
+        "adc": {
+          "channels": null,
+          "resolution_bits": 12,
+          "sample_rate_ksps": null
+        },
         "dac": null,
         "pwm_channels": null,
         "motor_pwm": true,
@@ -1593,13 +2141,20 @@
         "timer_groups": null,
         "watchdog_timers": null,
         "temperature_sensor": true,
-        "other": ["Event Task Matrix"]
+        "other": [
+          "Event Task Matrix"
+        ]
       },
       "security": {
         "secure_boot": true,
         "flash_encryption": true,
         "crypto_accelerator": true,
-        "crypto_algorithms": ["AES", "SHA", "ECC", "HMAC"],
+        "crypto_algorithms": [
+          "AES",
+          "SHA",
+          "ECC",
+          "HMAC"
+        ],
         "tee": true,
         "arm_trustzone": false,
         "psa_certified": false,
@@ -1612,7 +2167,7 @@
         "secure_debug": false
       },
       "power_management": {
-        "supply_voltage_min_v": 3.0,
+        "supply_voltage_min_v": 3,
         "supply_voltage_max_v": 3.6,
         "dc_dc_converter": false,
         "active_mode_ma": null,
@@ -1621,11 +2176,21 @@
         "deep_sleep_ua": null,
         "hibernate_ua": null,
         "shutdown_ua": null,
-        "power_modes": ["Active", "Modem Sleep", "Light Sleep", "Deep Sleep"],
-        "wakeup_sources": ["GPIO", "Timer"]
+        "power_modes": [
+          "Active",
+          "Modem Sleep",
+          "Light Sleep",
+          "Deep Sleep"
+        ],
+        "wakeup_sources": [
+          "GPIO",
+          "Timer"
+        ]
       },
       "package": {
-        "package_types": ["QFN"],
+        "package_types": [
+          "QFN"
+        ],
         "dimensions_mm": [],
         "pin_count": null,
         "operating_temp_min_c": -40,
@@ -1633,7 +2198,9 @@
       },
       "software_ecosystem": {
         "primary_sdk": "ESP-IDF",
-        "rtos_support": ["FreeRTOS"],
+        "rtos_support": [
+          "FreeRTOS"
+        ],
         "arduino_support": false,
         "micropython_support": false,
         "circuitpython_support": false,
@@ -1651,7 +2218,9 @@
         "pricing_notes": "Newly added to portfolio"
       },
       "metadata": {
-        "source_urls": ["https://github.com/artkeller/ESP32Features"],
+        "source_urls": [
+          "https://github.com/artkeller/ESP32Features"
+        ],
         "datasheet_urls": [],
         "last_updated": "2026-03-07",
         "notes": "Dual-core RISC-V variant of H-series. BLE 5.4 + 802.15.4. USB OTG and touch sensors.",
@@ -1663,7 +2232,14 @@
       "chip_model": "ESP32-P4",
       "status": "active",
       "release_year": 2024,
-      "target_applications": ["HMI", "Edge AI", "Multimedia", "Gateway", "Camera", "Display"],
+      "target_applications": [
+        "HMI",
+        "Edge AI",
+        "Multimedia",
+        "Gateway",
+        "Camera",
+        "Display"
+      ],
       "connectivity": {
         "wifi": null,
         "bluetooth": null,
@@ -1673,7 +2249,9 @@
         "cellular": null,
         "ethernet": true,
         "matter_support": false,
-        "other_protocols": ["Requires companion chip (ESP32-C6) for WiFi/BLE/Thread"]
+        "other_protocols": [
+          "Requires companion chip (ESP32-C6) for WiFi/BLE/Thread"
+        ]
       },
       "processing": {
         "cpu_architecture": "RISC-V (HP dual-core + LP single-core)",
@@ -1710,15 +2288,32 @@
         "i2c": 3,
         "i2s": 3,
         "i3c": true,
-        "usb": { "supported": true, "type": "USB 2.0 HS OTG + USB Serial/JTAG", "host": true, "device": true },
+        "usb": {
+          "supported": true,
+          "type": "USB 2.0 HS OTG + USB Serial/JTAG",
+          "host": true,
+          "device": true
+        },
         "sdio": true,
         "sd_mmc": true,
         "can_twai": true,
         "ethernet_mac": true,
         "camera_interface": true,
-        "lcd_interface": { "supported": true, "types": ["SPI LCD", "8080", "RGB", "MIPI-DSI"] },
+        "lcd_interface": {
+          "supported": true,
+          "types": [
+            "SPI LCD",
+            "8080",
+            "RGB",
+            "MIPI-DSI"
+          ]
+        },
         "touch_sensor_channels": 14,
-        "adc": { "channels": null, "resolution_bits": 12, "sample_rate_ksps": null },
+        "adc": {
+          "channels": null,
+          "resolution_bits": 12,
+          "sample_rate_ksps": null
+        },
         "dac": null,
         "pwm_channels": 8,
         "motor_pwm": true,
@@ -1730,13 +2325,28 @@
         "timer_groups": null,
         "watchdog_timers": null,
         "temperature_sensor": true,
-        "other": ["JPEG codec", "H.264 encoder", "ISP", "PPA (Pixel Processing Accelerator)", "3x TWAI", "PARLIO", "VAD", "Ethernet 10/100 RMII"]
+        "other": [
+          "JPEG codec",
+          "H.264 encoder",
+          "ISP",
+          "PPA (Pixel Processing Accelerator)",
+          "3x TWAI",
+          "PARLIO",
+          "VAD",
+          "Ethernet 10/100 RMII"
+        ]
       },
       "security": {
         "secure_boot": true,
         "flash_encryption": true,
         "crypto_accelerator": true,
-        "crypto_algorithms": ["AES-XTS", "SHA", "RSA", "ECC", "HMAC"],
+        "crypto_algorithms": [
+          "AES-XTS",
+          "SHA",
+          "RSA",
+          "ECC",
+          "HMAC"
+        ],
         "tee": true,
         "arm_trustzone": false,
         "psa_certified": false,
@@ -1749,7 +2359,7 @@
         "secure_debug": false
       },
       "power_management": {
-        "supply_voltage_min_v": 3.0,
+        "supply_voltage_min_v": 3,
         "supply_voltage_max_v": 3.6,
         "dc_dc_converter": true,
         "active_mode_ma": null,
@@ -1758,27 +2368,47 @@
         "deep_sleep_ua": null,
         "hibernate_ua": null,
         "shutdown_ua": null,
-        "power_modes": ["Active", "Light Sleep", "Deep Sleep"],
-        "wakeup_sources": ["GPIO", "Timer", "LP Core"]
+        "power_modes": [
+          "Active",
+          "Light Sleep",
+          "Deep Sleep"
+        ],
+        "wakeup_sources": [
+          "GPIO",
+          "Timer",
+          "LP Core"
+        ]
       },
       "package": {
-        "package_types": ["QFN104"],
-        "dimensions_mm": ["10x10"],
+        "package_types": [
+          "QFN104"
+        ],
+        "dimensions_mm": [
+          "10x10"
+        ],
         "pin_count": 104,
         "operating_temp_min_c": -40,
         "operating_temp_max_c": 85
       },
       "software_ecosystem": {
         "primary_sdk": "ESP-IDF",
-        "rtos_support": ["FreeRTOS"],
+        "rtos_support": [
+          "FreeRTOS"
+        ],
         "arduino_support": false,
         "micropython_support": false,
         "circuitpython_support": false,
         "zephyr_support": false,
         "matter_sdk": false,
         "homekit_support": false,
-        "ai_ml_frameworks": ["TensorFlow Lite Micro", "ESP-DL"],
-        "cloud_integrations": ["AWS IoT", "Azure IoT"],
+        "ai_ml_frameworks": [
+          "TensorFlow Lite Micro",
+          "ESP-DL"
+        ],
+        "cloud_integrations": [
+          "AWS IoT",
+          "Azure IoT"
+        ],
         "community_size": "small"
       },
       "pricing": {
@@ -1788,7 +2418,10 @@
         "pricing_notes": "Premium positioning"
       },
       "metadata": {
-        "source_urls": ["https://www.espressif.com/en/products/socs/esp32-p4", "https://github.com/artkeller/ESP32Features"],
+        "source_urls": [
+          "https://www.espressif.com/en/products/socs/esp32-p4",
+          "https://github.com/artkeller/ESP32Features"
+        ],
         "datasheet_urls": [],
         "last_updated": "2026-03-07",
         "notes": "Most powerful ESP SoC. No built-in radio — pairs with ESP32-C6 for connectivity. MIPI CSI/DSI, USB 2.0 HS, H.264, 400MHz RISC-V.",
@@ -1800,7 +2433,12 @@
       "chip_model": "ESP32-H21",
       "status": "announced",
       "release_year": 2026,
-      "target_applications": ["Smart Home Sensors", "Thread/Zigbee Mesh", "Matter Endpoints", "Battery-powered IoT"],
+      "target_applications": [
+        "Smart Home Sensors",
+        "Thread/Zigbee Mesh",
+        "Matter Endpoints",
+        "Battery-powered IoT"
+      ],
       "connectivity": {
         "wifi": null,
         "bluetooth": {
@@ -1876,13 +2514,26 @@
         "timer_groups": null,
         "watchdog_timers": null,
         "temperature_sensor": true,
-        "other": ["UART", "SPI", "I2C", "I2S", "PWM", "ADC", "DMA"]
+        "other": [
+          "UART",
+          "SPI",
+          "I2C",
+          "I2S",
+          "PWM",
+          "ADC",
+          "DMA"
+        ]
       },
       "security": {
         "secure_boot": true,
         "flash_encryption": true,
         "crypto_accelerator": true,
-        "crypto_algorithms": ["AES", "SHA", "ECC", "HMAC"],
+        "crypto_algorithms": [
+          "AES",
+          "SHA",
+          "ECC",
+          "HMAC"
+        ],
         "tee": false,
         "arm_trustzone": false,
         "psa_certified": false,
@@ -1895,7 +2546,7 @@
         "secure_debug": false
       },
       "power_management": {
-        "supply_voltage_min_v": 3.0,
+        "supply_voltage_min_v": 3,
         "supply_voltage_max_v": 3.6,
         "dc_dc_converter": true,
         "active_mode_ma": 8.2,
@@ -1904,11 +2555,20 @@
         "deep_sleep_ua": 5,
         "hibernate_ua": null,
         "shutdown_ua": null,
-        "power_modes": ["Active", "Light Sleep", "Deep Sleep"],
-        "wakeup_sources": ["GPIO", "Timer"]
+        "power_modes": [
+          "Active",
+          "Light Sleep",
+          "Deep Sleep"
+        ],
+        "wakeup_sources": [
+          "GPIO",
+          "Timer"
+        ]
       },
       "package": {
-        "package_types": ["QFN"],
+        "package_types": [
+          "QFN"
+        ],
         "dimensions_mm": [],
         "pin_count": null,
         "operating_temp_min_c": -40,
@@ -1916,7 +2576,9 @@
       },
       "software_ecosystem": {
         "primary_sdk": "ESP-IDF",
-        "rtos_support": ["FreeRTOS"],
+        "rtos_support": [
+          "FreeRTOS"
+        ],
         "arduino_support": false,
         "micropython_support": false,
         "circuitpython_support": false,
@@ -1934,7 +2596,10 @@
         "pricing_notes": "Not yet available"
       },
       "metadata": {
-        "source_urls": ["https://www.espressif.com/en/news/ESP32_H21", "https://www.cnx-software.com/2026/01/07/espressif-systems-showcases-esp32-e22-wi-fi-6e-soc-and-esp32-h21-ble-mcu-for-battery-powered-devices/"],
+        "source_urls": [
+          "https://www.espressif.com/en/news/ESP32_H21",
+          "https://www.cnx-software.com/2026/01/07/espressif-systems-showcases-esp32-e22-wi-fi-6e-soc-and-esp32-h21-ble-mcu-for-battery-powered-devices/"
+        ],
         "datasheet_urls": [],
         "last_updated": "2026-03-07",
         "notes": "Enhanced H2 with on-chip DC-DC converter for lower power. RX active 8.2mA, deep sleep 5µA. TX up to 20dBm.",
@@ -1946,12 +2611,28 @@
       "chip_model": "ESP32-E22",
       "status": "announced",
       "release_year": 2026,
-      "target_applications": ["Wi-Fi Gateway", "High-throughput IoT", "Streaming", "Smart Home Hub"],
+      "target_applications": [
+        "Wi-Fi Gateway",
+        "High-throughput IoT",
+        "Streaming",
+        "Smart Home Hub"
+      ],
       "connectivity": {
         "wifi": {
           "supported": true,
-          "standards": ["802.11a", "802.11b", "802.11g", "802.11n", "802.11ac", "802.11ax"],
-          "bands": ["2.4GHz", "5GHz", "6GHz"],
+          "standards": [
+            "802.11a",
+            "802.11b",
+            "802.11g",
+            "802.11n",
+            "802.11ac",
+            "802.11ax"
+          ],
+          "bands": [
+            "2.4GHz",
+            "5GHz",
+            "6GHz"
+          ],
           "mimo": "2T2R",
           "max_data_rate_mbps": 2100,
           "wifi_generation": "WiFi 6E",
@@ -2026,7 +2707,10 @@
         "timer_groups": null,
         "watchdog_timers": null,
         "temperature_sensor": false,
-        "other": ["PCIe interface", "SDIO interface"]
+        "other": [
+          "PCIe interface",
+          "SDIO interface"
+        ]
       },
       "security": {
         "secure_boot": null,
@@ -2084,7 +2768,10 @@
         "pricing_notes": "Not yet available"
       },
       "metadata": {
-        "source_urls": ["https://www.espressif.com/en/news/ESP32_E22_Announcement", "https://www.cnx-software.com/2026/01/07/espressif-systems-showcases-esp32-e22-wi-fi-6e-soc-and-esp32-h21-ble-mcu-for-battery-powered-devices/"],
+        "source_urls": [
+          "https://www.espressif.com/en/news/ESP32_E22_Announcement",
+          "https://www.cnx-software.com/2026/01/07/espressif-systems-showcases-esp32-e22-wi-fi-6e-soc-and-esp32-h21-ble-mcu-for-battery-powered-devices/"
+        ],
         "datasheet_urls": [],
         "last_updated": "2026-03-07",
         "notes": "First Espressif WiFi 6E chip. Tri-band 2.4/5/6GHz, 2x2 MIMO, 160MHz BW, up to 2.1Gbps. Connectivity co-processor (not standalone MCU). Uses PCIe/SDIO to connect to host.",
